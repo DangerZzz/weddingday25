@@ -1,0 +1,3169 @@
+<!DOCTYPE html>
+<html lang="ru" style="color-scheme:light">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light only">
+<meta name="theme-color" content="#FDFCFA">
+<meta name="supported-color-schemes" content="light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Даниил & Дарья · 29–31 мая</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ── FORCE LIGHT MODE — overrides system dark theme on all browsers ── */
+:root {
+  color-scheme: light only !important;
+  --force-bg: #FDFCFA;
+}
+html {
+  color-scheme: light only !important;
+  background: #FDFCFA !important;
+  forced-color-adjust: none !important;
+}
+html, body {
+  background: #FDFCFA !important;
+  color: #1E1C1A !important;
+}
+/* Force light mode on ALL browsers and OS settings */
+@media (prefers-color-scheme: dark) {
+  html, body { background: #FDFCFA !important; color: #1E1C1A !important; }
+}
+@media (prefers-color-scheme: no-preference) {
+  html, body { background: #FDFCFA !important; }
+}
+/* Samsung Internet & Android Chrome dark-mode auto-invert override */
+@media (inverted-colors: inverted) {
+  html, body, * { filter: invert(0) !important; }
+}
+/* Disable Android browser forced colors */
+* { forced-color-adjust: none !important; }
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --wine:   #3D1A22;
+  --burg:   #6B2D3A;
+  --grey-bg:#EDEAE6;
+  --white:  #FDFCFA;
+  --mist:   #A09890;
+  --ink:    #1E1C1A;
+  --font-d: 'Cormorant Garamond', serif;
+  --font-b: 'Jost', sans-serif;
+  --r:      50px;   /* pill radius for all buttons */
+  --r-card: 16px;
+  --r-sm:   12px;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-b);
+  background: #FDFCFA !important;
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+/* ══════════════════════════════════
+   1. HERO — atmospheric, decorative
+══════════════════════════════════ */
+.hero {
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: flex-start;
+  text-align: center;
+  background: #3D1A22 !important;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* Linen texture overlay */
+.hero::before {
+  content: '';
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  opacity: 0.7;
+}
+
+/* Top portion */
+.hero-top {
+  position: relative; z-index: 2;
+  display: flex; flex-direction: column; align-items: center;
+  padding: 3.5rem 2rem 2.5rem;
+  width: 100%;
+}
+
+/* Thin full-width decorative rule at top */
+.hero-top-rule {
+  position: absolute; top: 0; left: 5%; right: 5%; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(220,180,160,0.25), transparent);
+}
+
+/* Pine icon */
+.hero-pine-icon { margin-bottom: 1.5rem; opacity: 0.85; }
+
+/* Date badge at top */
+.hero-eyebrow {
+  font-family: var(--font-b); font-size: 9px; font-weight: 300;
+  letter-spacing: 0.38em; text-transform: uppercase;
+  color: rgba(220,180,160,0.55); margin-bottom: 2rem;
+}
+
+/* Ornamental frame around names */
+.hero-names-wrap {
+  position: relative;
+  padding: 1.5rem 2.5rem;
+  margin-bottom: 1.25rem;
+}
+/* Corner marks */
+.hero-names-wrap::before,
+.hero-names-wrap::after {
+  content: '';
+  position: absolute;
+  width: 18px; height: 18px;
+  border-color: rgba(220,180,160,0.35);
+  border-style: solid;
+}
+.hero-names-wrap::before { top: 0; left: 0; border-width: 0.5px 0 0 0.5px; }
+.hero-names-wrap::after  { bottom: 0; right: 0; border-width: 0 0.5px 0.5px 0; }
+
+.hero-names {
+  font-family: var(--font-d);
+  font-size: clamp(2.2rem, 9vw, 4rem);
+  font-weight: 300; line-height: 1.1;
+  color: rgba(255,255,255,0.95);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.hero-amp {
+  font-family: var(--font-d);
+  font-style: italic; font-size: 0.55em;
+  color: rgba(220,180,160,0.85); display: block;
+  letter-spacing: 0.1em; margin: 0.3rem 0;
+  text-transform: none; font-weight: 300;
+}
+
+/* Ornamental divider */
+.hero-orn {
+  display: flex; align-items: center; gap: 10px;
+  justify-content: center; margin: 0.5rem 0 1.25rem;
+}
+.hero-orn-line { width: 45px; height: 0.5px; background: rgba(220,180,160,0.3); }
+.hero-orn-diamond {
+  width: 5px; height: 5px;
+  border: 0.5px solid rgba(220,180,160,0.4);
+  transform: rotate(45deg);
+}
+.hero-orn-dot {
+  width: 3px; height: 3px;
+  background: rgba(220,180,160,0.3); border-radius: 50%;
+}
+
+.hero-invite {
+  font-family: var(--font-d);
+  font-size: 14px; font-style: italic; font-weight: 300;
+  color: rgba(255,255,255,0.55); line-height: 1.9;
+  margin-bottom: 1.75rem;
+  letter-spacing: 0.04em;
+}
+
+/* Address — two lines */
+.hero-addr {
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  margin-bottom: 0;
+}
+.hero-addr-line {
+  font-family: var(--font-b);
+  font-size: 9px; font-weight: 300;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+
+/* Wine bottom — full width, contains timer */
+.hero-bottom {
+  width: 100%; background: var(--wine) !important;
+  margin-top: auto; position: relative; z-index: 2;
+}
+.hero-divline {
+  width: 0.5px; height: 36px;
+  background: rgba(255,255,255,0.12); margin: 0 auto;
+}
+
+/* Countdown */
+.countdown {
+  display: flex; align-items: flex-end; justify-content: center;
+  gap: 4px; padding: 1.5rem 1rem 2rem;
+}
+.cd-item { display: flex; flex-direction: column; align-items: center; gap: 5px; min-width: 52px; }
+.cd-num {
+  font-family: var(--font-d);
+  font-size: clamp(1.8rem, 6vw, 2.8rem);
+  font-weight: 300; color: rgba(255,255,255,0.95); line-height: 1;
+}
+.cd-label {
+  font-family: var(--font-b); font-size: 8px; font-weight: 300;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(220,180,160,0.55);
+}
+.cd-sep {
+  font-family: var(--font-d); font-size: 1.5rem; font-weight: 300;
+  color: rgba(220,180,160,0.35); padding-bottom: 14px;
+}
+
+/* ══════════════════════════════════
+   SECTION SHELLS
+══════════════════════════════════ */
+.sec-dark  { background: var(--wine) !important; color: rgba(255,255,255,0.88); padding: 4.5rem 1.5rem; }
+.sec-light { background: var(--grey-bg) !important; color: var(--ink); padding: 4.5rem 1.5rem; }
+.sec-dark .inner,
+.sec-light .inner { max-width: 720px; margin: 0 auto; }
+
+.sec-title {
+  font-family: var(--font-d);
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 300; line-height: 1.15; margin-bottom: 1rem;
+}
+.sec-dark  .sec-title { color: rgba(255,255,255,0.94); }
+.sec-dark  .sec-title em { font-style: italic; color: rgba(220,180,160,0.85); }
+.sec-light .sec-title { color: var(--ink); }
+.sec-light .sec-title em { font-style: italic; color: var(--burg); }
+
+.sec-rule { display: flex; align-items: center; gap: 8px; margin-bottom: 2rem; }
+.sec-rule::before { content: ''; width: 18px; height: 0.5px; }
+.sec-rule-d { width: 4px; height: 4px; transform: rotate(45deg); flex-shrink: 0; }
+.sec-rule::after { content: ''; flex: 1; height: 0.5px; }
+.sec-dark  .sec-rule::before,
+.sec-dark  .sec-rule::after { background: rgba(255,255,255,0.12); }
+.sec-dark  .sec-rule-d      { background: rgba(220,180,160,0.35); }
+.sec-light .sec-rule::before,
+.sec-light .sec-rule::after { background: rgba(107,45,58,0.12); }
+.sec-light .sec-rule-d      { background: rgba(107,45,58,0.3); }
+
+/* Mini cards */
+.mini-card-dark {
+  background: rgba(255,255,255,0.05);
+  border: 0.5px solid rgba(255,255,255,0.09);
+  border-radius: var(--r-card); padding: 1.75rem;
+  transition: background .3s;
+}
+.mini-card-dark:hover { background: rgba(255,255,255,0.08); }
+
+.mini-card-light {
+  background: var(--white) !important;
+  border: 0.5px solid rgba(107,45,58,0.09);
+  border-radius: var(--r-card); padding: 1.75rem;
+  box-shadow: 0 2px 16px rgba(30,28,26,0.06);
+}
+
+/* ── WEDDING WEEKEND ── */
+.ww-days { display: flex; flex-direction: column; gap: 1.5rem; }
+.ww-day-header { display: flex; align-items: baseline; gap: 12px; margin-bottom: 1rem; padding-bottom: .75rem; border-bottom: 0.5px solid rgba(255,255,255,0.08); }
+.ww-day-date { font-family: var(--font-d); font-size: 1.8rem; font-weight: 300; color: rgba(255,255,255,0.9); }
+.ww-day-name { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.3); font-weight: 300; }
+.ww-items { display: flex; flex-direction: column; gap: .5rem; }
+.ww-item { display: flex; align-items: center; gap: 12px; padding: .6rem .75rem; border-radius: 8px; transition: background .2s; }
+.ww-item:hover { background: rgba(255,255,255,0.04); }
+.ww-dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(220,180,160,0.4); flex-shrink: 0; }
+.ww-item-name { font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.75); letter-spacing: .02em; }
+.ww-item-sub  { font-size: 11px; color: rgba(255,255,255,0.3); margin-left: auto; font-weight: 300; letter-spacing: .04em; white-space: nowrap; }
+
+/* ── LOCATION ── */
+.loc-body { font-size: 13.5px; color: #5A5652; line-height: 1.85; margin-bottom: 1.5rem; }
+
+.map-wrap {
+  border-radius: var(--r-sm); overflow: hidden;
+  margin-bottom: 1.25rem;
+  border: 0.5px solid rgba(107,45,58,0.12);
+  cursor: pointer; display: block; transition: all .3s; text-decoration: none;
+  position: relative;
+}
+.map-wrap:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(30,28,26,0.1); }
+.map-inner { position: relative; width: 100%; overflow: hidden; border-radius: var(--r-sm); line-height: 0; }
+.map-inner img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* Hide OSM attribution "report a problem" */
+.map-pin-label {
+  position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%);
+  background: rgba(253,252,250,0.95); backdrop-filter: blur(8px);
+  border: 0.5px solid rgba(107,45,58,0.18); border-radius: 50px;
+  padding: 6px 18px; font-size: 11px;
+  color: #5A5652; white-space: nowrap; letter-spacing: .06em;
+  display: flex; align-items: center; gap: 6px;
+  box-shadow: 0 2px 10px rgba(30,28,26,0.08); z-index: 11;
+}
+.map-pin-dot { width: 5px; height: 5px; background: var(--burg); border-radius: 50%; flex-shrink: 0; }
+
+.loc-links { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+.loc-link {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  padding: 1.4rem 1rem;
+  background: var(--white) !important;
+  border: 0.5px solid rgba(107,45,58,0.09);
+  border-radius: var(--r-card); text-decoration: none; color: var(--ink);
+  transition: all .28s; text-align: center;
+  box-shadow: 0 2px 12px rgba(30,28,26,0.05);
+}
+.loc-link:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(30,28,26,0.1); border-color: rgba(107,45,58,0.2); }
+.loc-link-icon { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.loc-link-icon svg { width: 22px; height: 22px; }
+.icon-ig-bg  { background: rgba(193,53,132,0.08); }
+.icon-nav-bg { background: rgba(49,152,49,0.1); }
+.loc-link-label { font-size: 12px; font-weight: 500; color: var(--ink); }
+.loc-link-sub   { font-size: 10px; color: var(--mist); letter-spacing: .04em; }
+
+/* ── STYLE / ATMOSPHERE ── */
+.mood-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 1.5rem; }
+.mood-tag {
+  display: inline-flex; align-items: center;
+  background: rgba(255,255,255,0.06); border: 0.5px solid rgba(255,255,255,0.12);
+  border-radius: var(--r); padding: 5px 15px;
+  font-size: 11px; font-weight: 300; color: rgba(255,255,255,0.65); letter-spacing: .04em;
+}
+
+/* Palette — circles only, no labels */
+.palette-circles { display: flex; gap: 14px; margin-bottom: 1.75rem; flex-wrap: wrap; }
+.pal-circle { width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0; }
+
+/* Outfits separate block */
+.outfits-block {
+  margin-top: 1.5rem; padding: 1.2rem 1.5rem;
+  background: rgba(255,255,255,0.05);
+  border: 0.5px solid rgba(255,255,255,0.1);
+  border-radius: var(--r-card);
+  font-size: 14px; color: rgba(255,255,255,0.6);
+  line-height: 1.85;
+  font-style: italic;
+}
+.outfits-block strong { color: rgba(220,180,160,0.9); font-style: normal; font-weight: 400; }
+
+.vibe-text {
+  font-size: 14px; line-height: 1.9; color: rgba(255,255,255,0.55);
+  padding: 1.25rem 1.5rem;
+  background: rgba(255,255,255,0.04);
+  border-left: 1.5px solid rgba(220,180,160,0.3);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+  margin-bottom: 1.5rem;
+}
+
+.gift-rule { border-top: 0.5px solid rgba(255,255,255,0.07); padding-top: 1.5rem; margin-top: 1.5rem; }
+.gift-title { font-family: var(--font-d); font-size: 1.25rem; font-style: italic; font-weight: 300; color: rgba(220,180,160,0.85); margin-bottom: .65rem; }
+.gift-body  { font-size: 13.5px; color: rgba(255,255,255,0.42); line-height: 1.9; }
+
+/* ── CONNECTION ── */
+.conn-text { font-size: 14px; line-height: 1.9; color: #5A5652; margin-bottom: 1.5rem; }
+.conn-note { font-size: 12px; color: var(--mist); margin: 1.1rem 0 .45rem; }
+.conn-links { display: flex; flex-direction: column; gap: .75rem; }
+.conn-link {
+  display: flex; align-items: center; gap: 12px;
+  padding: 1.1rem 1.25rem;
+  background: var(--white) !important;
+  border: 0.5px solid rgba(107,45,58,0.09);
+  border-radius: var(--r-card); text-decoration: none; color: var(--ink);
+  transition: all .28s; box-shadow: 0 2px 12px rgba(30,28,26,0.05);
+}
+.conn-link:hover { transform: translateY(-2px); border-color: rgba(107,45,58,0.22); box-shadow: 0 6px 24px rgba(30,28,26,0.1); }
+.conn-link-icon { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.conn-link-icon svg { width: 18px; height: 18px; }
+.icon-tg     { background: rgba(41,182,246,0.1); }
+.icon-gdrive { background: rgba(66,133,244,0.08); }
+.conn-link-name { font-weight: 500; font-size: 13px; display: block; }
+.conn-link-sub  { font-size: 11px; color: var(--mist); display: block; margin-top: 1px; }
+
+/* ── QUESTIONNAIRE ── */
+.q-step { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 0.5px solid rgba(255,255,255,0.06); }
+.q-step:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.q-title { font-family: var(--font-d); font-size: 1.2rem; font-weight: 400; color: rgba(255,255,255,0.88); margin-bottom: .3rem; }
+.q-sub   { font-size: 11px; color: rgba(255,255,255,0.28); letter-spacing: .03em; margin-bottom: 1rem; }
+
+.name-field {
+  width: 100%; padding: .8rem 1.2rem;
+  border: 0.5px solid rgba(255,255,255,0.12); border-radius: var(--r);
+  font-family: var(--font-b); font-size: 14px; color: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.06) !important; outline: none; transition: border-color .25s;
+}
+.name-field::placeholder { color: rgba(255,255,255,0.22); }
+.name-field:focus { border-color: rgba(220,180,160,0.4); }
+
+.opts { display: flex; flex-wrap: wrap; gap: 7px; }
+.opt-chip {
+  padding: 7px 16px; border: 0.5px solid rgba(255,255,255,0.12); border-radius: var(--r);
+  font-family: var(--font-b); font-size: 12px; color: rgba(255,255,255,0.52);
+  background: rgba(255,255,255,0.04) !important; cursor: pointer; transition: all .2s;
+  user-select: none; letter-spacing: .02em;
+}
+.opt-chip:hover { border-color: rgba(220,180,160,0.4); color: rgba(220,180,160,0.9); }
+.opt-chip.selected { background: var(--burg) !important; border-color: var(--burg); color: #fff; }
+
+.check-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.check-item { display: flex; align-items: center; gap: 9px; padding: 9px 14px; border: 0.5px solid rgba(255,255,255,0.09); border-radius: var(--r); cursor: pointer; transition: all .2s; user-select: none; }
+.check-item:hover { border-color: rgba(220,180,160,0.3); }
+.check-item.checked { border-color: rgba(107,45,58,0.6); background: rgba(107,45,58,0.12) !important; }
+.check-box { width: 16px; height: 16px; border: 1px solid rgba(255,255,255,0.15); border-radius: 4px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.04) !important; transition: all .2s; }
+.check-item.checked .check-box { background: var(--burg) !important; border-color: var(--burg); }
+.check-box svg { display: none; }
+.check-item.checked .check-box svg { display: block; }
+.check-item-label { font-size: 12px; color: rgba(255,255,255,0.65); }
+
+.other-wrap { margin-top: 8px; display: none; }
+.other-wrap.visible { display: block; }
+.other-wrap input { width: 100%; padding: 9px 14px; border: 0.5px solid rgba(255,255,255,0.12); border-radius: var(--r); font-family: var(--font-b); font-size: 12px; color: rgba(255,255,255,0.8); background: rgba(255,255,255,0.05) !important; outline: none; }
+.other-wrap input::placeholder { color: rgba(255,255,255,0.22); }
+.other-wrap input:focus { border-color: rgba(220,180,160,0.35); }
+
+.submit-btn { width: 100%; padding: .95rem; background: var(--burg) !important; border: none; border-radius: var(--r); font-family: var(--font-b); font-size: 11px; font-weight: 500; letter-spacing: .18em; color: #fff !important; cursor: pointer; text-transform: uppercase; transition: all .3s; margin-top: 2rem; display: block; }
+.submit-btn:hover { background: #8C3D50 !important; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(107,45,58,0.4); }
+.submit-btn:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+
+.success-msg { display: none; padding: 1.35rem; background: rgba(107,45,58,0.15) !important; border: 0.5px solid rgba(107,45,58,0.3); border-radius: var(--r-card); text-align: center; font-family: var(--font-d); font-size: 1.15rem; font-style: italic; color: rgba(220,180,160,0.9); margin-top: 1rem; }
+
+/* ── TAKE IT ── */
+.take-list { display: flex; flex-direction: column; gap: 1.25rem; margin-top: .5rem; }
+.take-item-title { font-family: var(--font-d); font-size: 1.3rem; font-weight: 400; color: var(--ink); margin-bottom: .5rem; }
+.take-item-title em { font-style: italic; color: var(--burg); }
+.take-item-body { font-size: 13.5px; color: #5A5652; line-height: 1.85; }
+.take-item-body strong { font-weight: 500; color: var(--ink); }
+.take-divider { width: 100%; height: 0.5px; background: rgba(107,45,58,0.1); margin: 1.25rem 0; }
+.take-ps { margin-top: 1.75rem; padding: 1.1rem 1.4rem; background: rgba(107,45,58,0.05) !important; border: 0.5px solid rgba(107,45,58,0.1); border-radius: var(--r-sm); font-size: 13px; color: #5A5652; line-height: 1.85; }
+.take-ps strong { color: var(--burg); font-weight: 500; }
+
+/* ── FOOTER ── */
+.footer { background: var(--wine) !important; text-align: center; padding: 3rem 1.5rem 4rem; border-top: 0.5px solid rgba(255,255,255,0.05); }
+.footer-orn { display: flex; align-items: center; gap: 10px; justify-content: center; margin-bottom: 1.5rem; }
+.footer-orn-line { width: 50px; height: 0.5px; background: rgba(255,255,255,0.1); }
+.footer-orn-d { width: 4px; height: 4px; border: 0.5px solid rgba(220,180,160,0.3); transform: rotate(45deg); }
+.footer-date { font-family: var(--font-d); font-size: 1.1rem; font-weight: 300; color: rgba(255,255,255,0.5); font-style: italic; }
+.footer-divider { width: 24px; height: 0.5px; background: rgba(255,255,255,0.15); margin: .75rem auto; }
+.footer-addr { font-family: var(--font-b); font-size: 9px; font-weight: 300; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+.footer-wait { font-family: var(--font-d); font-size: 1.5rem; font-style: italic; color: rgba(255,255,255,0.7); }
+.footer-love { font-family: var(--font-b); font-size: 9px; font-weight: 300; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-top: .5rem; }
+
+/* ── SCROLL REVEAL ── */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 600px) {
+  .hero-top { padding: 3rem 1.5rem 2rem; }
+  .sec-dark, .sec-light { padding: 3.5rem 1.25rem; }
+  .check-grid { grid-template-columns: 1fr; }
+  .loc-links  { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 380px) {
+  .hero-names { font-size: 2.6rem; }
+  .loc-links  { grid-template-columns: 1fr; }
+}
+
+.hero-divline-light {
+  width: 0.5px; height: 30px;
+  background: rgba(220,180,160,0.3); margin: 1.75rem auto 0;
+}
+.hero-top .countdown { padding: 1rem 1rem 0; }
+
+/* ══════════════════════════════════
+   GLOBAL LINE-ART DECOR
+══════════════════════════════════ */
+
+/* Sections get botanical corner accents */
+.sec-dark, .sec-light {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Top-left botanical accent on every section */
+.sec-dark::before, .sec-light::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 130px; height: 130px;
+  pointer-events: none; z-index: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Bottom-right botanical accent */
+.sec-dark::after, .sec-light::after {
+  content: '';
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 130px; height: 130px;
+  pointer-events: none; z-index: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: scale(-1);
+}
+
+/* Dark sections — light line-art */
+.sec-dark::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 130 130'%3E%3Cg stroke='%23E0C8B0' stroke-width='0.6' fill='none' stroke-linecap='round' opacity='0.18'%3E%3Cpath d='M5,125 Q30,90 55,55 Q80,25 125,5'/%3E%3Cpath d='M12,118 Q8,105 22,98'/%3E%3Cpath d='M20,108 Q14,92 30,84'/%3E%3Cpath d='M30,96 Q22,78 40,72'/%3E%3Cpath d='M42,82 Q32,65 52,58'/%3E%3Cpath d='M56,68 Q46,52 65,46'/%3E%3Cpath d='M70,54 Q60,38 80,32'/%3E%3Cpath d='M18,114 Q28,100 14,90'/%3E%3Cpath d='M28,102 Q40,86 24,78'/%3E%3Cpath d='M40,88 Q52,72 36,64'/%3E%3Ccircle cx='55' cy='55' r='1.3' fill='%23E0C8B0' opacity='0.4'/%3E%3Ccircle cx='80' cy='32' r='1' fill='%23E0C8B0' opacity='0.35'/%3E%3C/g%3E%3C/svg%3E");
+}
+.sec-dark::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 130 130'%3E%3Cg stroke='%23E0C8B0' stroke-width='0.6' fill='none' stroke-linecap='round' opacity='0.18'%3E%3Cpath d='M5,125 Q30,90 55,55 Q80,25 125,5'/%3E%3Cpath d='M12,118 Q8,105 22,98'/%3E%3Cpath d='M20,108 Q14,92 30,84'/%3E%3Cpath d='M30,96 Q22,78 40,72'/%3E%3Cpath d='M42,82 Q32,65 52,58'/%3E%3Cpath d='M56,68 Q46,52 65,46'/%3E%3Cpath d='M70,54 Q60,38 80,32'/%3E%3Cpath d='M18,114 Q28,100 14,90'/%3E%3Cpath d='M28,102 Q40,86 24,78'/%3E%3Cpath d='M40,88 Q52,72 36,64'/%3E%3Ccircle cx='55' cy='55' r='1.3' fill='%23E0C8B0' opacity='0.4'/%3E%3Ccircle cx='80' cy='32' r='1' fill='%23E0C8B0' opacity='0.35'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Light sections — burgundy line-art */
+.sec-light::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 130 130'%3E%3Cg stroke='%236B2D3A' stroke-width='0.6' fill='none' stroke-linecap='round' opacity='0.15'%3E%3Cpath d='M5,125 Q30,90 55,55 Q80,25 125,5'/%3E%3Cpath d='M12,118 Q8,105 22,98'/%3E%3Cpath d='M20,108 Q14,92 30,84'/%3E%3Cpath d='M30,96 Q22,78 40,72'/%3E%3Cpath d='M42,82 Q32,65 52,58'/%3E%3Cpath d='M56,68 Q46,52 65,46'/%3E%3Cpath d='M70,54 Q60,38 80,32'/%3E%3Cpath d='M18,114 Q28,100 14,90'/%3E%3Cpath d='M28,102 Q40,86 24,78'/%3E%3Cpath d='M40,88 Q52,72 36,64'/%3E%3Ccircle cx='55' cy='55' r='1.3' fill='%236B2D3A' opacity='0.35'/%3E%3Ccircle cx='80' cy='32' r='1' fill='%236B2D3A' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+}
+.sec-light::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 130 130'%3E%3Cg stroke='%236B2D3A' stroke-width='0.6' fill='none' stroke-linecap='round' opacity='0.15'%3E%3Cpath d='M5,125 Q30,90 55,55 Q80,25 125,5'/%3E%3Cpath d='M12,118 Q8,105 22,98'/%3E%3Cpath d='M20,108 Q14,92 30,84'/%3E%3Cpath d='M30,96 Q22,78 40,72'/%3E%3Cpath d='M42,82 Q32,65 52,58'/%3E%3Cpath d='M56,68 Q46,52 65,46'/%3E%3Cpath d='M70,54 Q60,38 80,32'/%3E%3Cpath d='M18,114 Q28,100 14,90'/%3E%3Cpath d='M28,102 Q40,86 24,78'/%3E%3Cpath d='M40,88 Q52,72 36,64'/%3E%3Ccircle cx='55' cy='55' r='1.3' fill='%236B2D3A' opacity='0.35'/%3E%3Ccircle cx='80' cy='32' r='1' fill='%236B2D3A' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Ensure section content is above decor */
+.sec-dark .inner, .sec-light .inner { position: relative; z-index: 1; }
+
+/* Hide decor on mobile to keep things clean */
+@media (max-width: 600px) {
+  .sec-dark::before, .sec-dark::after,
+  .sec-light::before, .sec-light::after {
+    width: 80px; height: 80px;
+  }
+}
+
+/* Mini-cards get a small floating sprig in corner */
+.mini-card-dark, .mini-card-light {
+  position: relative;
+  overflow: hidden;
+}
+.mini-card-dark > *, .mini-card-light > * { position: relative; z-index: 1; }
+
+.mini-card-dark::before {
+  content: '';
+  position: absolute;
+  top: -8px; right: -8px;
+  width: 70px; height: 70px;
+  pointer-events: none; opacity: 0.08;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 70'%3E%3Cg stroke='%23E0C8B0' stroke-width='0.8' fill='none' stroke-linecap='round'%3E%3Cpath d='M35,65 Q35,40 35,8'/%3E%3Cpath d='M35,18 Q25,15 17,18'/%3E%3Cpath d='M35,18 Q45,15 53,18'/%3E%3Cpath d='M35,26 Q22,22 12,26'/%3E%3Cpath d='M35,26 Q48,22 58,26'/%3E%3Cpath d='M35,34 Q20,29 8,34'/%3E%3Cpath d='M35,34 Q50,29 62,34'/%3E%3Cpath d='M35,42 Q18,36 4,42'/%3E%3Cpath d='M35,42 Q52,36 66,42'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(-15deg);
+}
+
+.mini-card-light::before {
+  content: '';
+  position: absolute;
+  top: -8px; right: -8px;
+  width: 70px; height: 70px;
+  pointer-events: none; opacity: 0.07;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 70'%3E%3Cg stroke='%236B2D3A' stroke-width='0.8' fill='none' stroke-linecap='round'%3E%3Cpath d='M35,65 Q35,40 35,8'/%3E%3Cpath d='M35,18 Q25,15 17,18'/%3E%3Cpath d='M35,18 Q45,15 53,18'/%3E%3Cpath d='M35,26 Q22,22 12,26'/%3E%3Cpath d='M35,26 Q48,22 58,26'/%3E%3Cpath d='M35,34 Q20,29 8,34'/%3E%3Cpath d='M35,34 Q50,29 62,34'/%3E%3Cpath d='M35,42 Q18,36 4,42'/%3E%3Cpath d='M35,42 Q52,36 66,42'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(-15deg);
+}
+
+/* Section title gets a small pine sprig before it */
+.sec-title-with-icon {
+  display: inline-flex; align-items: center; gap: 12px;
+}
+.sec-title-icon { display: inline-block; opacity: 0.5; }
+
+/* Between-section decorative break */
+.section-divider {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+  padding: 1.5rem 0;
+}
+.section-divider::before,
+.section-divider::after {
+  content: ''; flex: 1; height: 0.5px; max-width: 80px;
+}
+.section-divider.on-dark::before,
+.section-divider.on-dark::after { background: rgba(255,255,255,0.1); }
+.section-divider.on-light::before,
+.section-divider.on-light::after { background: rgba(107,45,58,0.12); }
+
+
+/* ══════════════════════════════════
+   CONTEXT-AWARE COMPONENT STYLES
+   Components adapt to parent section background
+══════════════════════════════════ */
+
+/* WW items inside light section */
+.sec-light .ww-day-header { border-bottom-color: rgba(107,45,58,0.12); }
+.sec-light .ww-day-date { color: var(--ink); }
+.sec-light .ww-day-name { color: var(--mist); }
+.sec-light .ww-item:hover { background: rgba(107,45,58,0.04); }
+.sec-light .ww-dot { background: var(--burg); opacity: 0.5; }
+.sec-light .ww-item-name { color: var(--ink); }
+.sec-light .ww-item-sub { color: var(--mist); }
+
+/* WW items inside dark section — already styled, but ensure */
+.sec-dark .ww-day-header { border-bottom-color: rgba(255,255,255,0.08); }
+.sec-dark .ww-day-date { color: rgba(255,255,255,0.9); }
+.sec-dark .ww-day-name { color: rgba(255,255,255,0.3); }
+
+/* Location body */
+.sec-light .loc-body { color: #5A5652; }
+.sec-dark  .loc-body { color: rgba(255,255,255,0.6); }
+
+/* Location links — auto-adapt */
+.sec-dark .loc-link {
+  background: rgba(255,255,255,0.05) !important;
+  border-color: rgba(255,255,255,0.09);
+  color: rgba(255,255,255,0.85);
+}
+.sec-dark .loc-link:hover { background: rgba(255,255,255,0.08) !important; border-color: rgba(220,180,160,0.3); }
+.sec-dark .loc-link-label { color: rgba(255,255,255,0.92); }
+.sec-dark .loc-link-sub { color: rgba(255,255,255,0.4); }
+
+/* Map label inside dark section */
+.sec-dark .map-pin-label {
+  background: rgba(255,255,255,0.95);
+  color: var(--ink);
+}
+
+/* Mood tags — light context */
+.sec-light .mood-tag {
+  background: rgba(107,45,58,0.06);
+  border-color: rgba(107,45,58,0.18);
+  color: var(--burg);
+}
+
+/* Outfits block — light context */
+.sec-light .outfits-block {
+  background: rgba(107,45,58,0.04);
+  border-color: rgba(107,45,58,0.12);
+  color: #5A5652;
+}
+.sec-light .outfits-block strong { color: var(--burg); }
+
+/* Gift on light bg */
+.mini-card-light .gift-title { color: var(--burg); }
+.mini-card-light .gift-body  { color: #5A5652; }
+
+/* Connection text inside dark */
+.sec-dark .conn-text { color: rgba(255,255,255,0.55); }
+.sec-dark .conn-note { color: rgba(255,255,255,0.4); }
+.sec-dark .conn-link {
+  background: rgba(255,255,255,0.05) !important;
+  border-color: rgba(255,255,255,0.09);
+  color: rgba(255,255,255,0.85);
+}
+.sec-dark .conn-link:hover { background: rgba(255,255,255,0.08) !important; border-color: rgba(220,180,160,0.3); }
+.sec-dark .conn-link-name { color: rgba(255,255,255,0.92); }
+.sec-dark .conn-link-sub { color: rgba(255,255,255,0.4); }
+/* sec-light Connection */
+.sec-light .conn-text { color: #5A5652; }
+.sec-light .conn-note { color: var(--mist); }
+
+/* QUESTIONNAIRE inside light section — invert form colors */
+.sec-light .q-title { color: var(--ink); }
+.sec-light .q-sub   { color: var(--mist); }
+.sec-light .name-field {
+  background: rgba(255,255,255,0.6) !important;
+  border-color: rgba(107,45,58,0.15);
+  color: var(--ink);
+}
+.sec-light .name-field::placeholder { color: var(--mist); }
+.sec-light .name-field:focus { border-color: rgba(107,45,58,0.4); }
+
+.sec-light .opt-chip {
+  background: rgba(255,255,255,0.6) !important;
+  border-color: rgba(107,45,58,0.15);
+  color: var(--ink);
+}
+.sec-light .opt-chip:hover { border-color: var(--burg); color: var(--burg); }
+.sec-light .opt-chip.selected { background: var(--burg) !important; border-color: var(--burg); color: #fff; }
+
+.sec-light .check-item {
+  border-color: rgba(107,45,58,0.12);
+  background: rgba(255,255,255,0.4);
+}
+.sec-light .check-item:hover { border-color: rgba(107,45,58,0.3); background: rgba(255,255,255,0.7); }
+.sec-light .check-item.checked { border-color: var(--burg); background: rgba(107,45,58,0.06) !important; }
+.sec-light .check-box {
+  border-color: rgba(107,45,58,0.2);
+  background: #fff !important;
+}
+.sec-light .check-item-label { color: var(--ink); }
+.sec-light .other-wrap input {
+  background: rgba(255,255,255,0.6) !important;
+  border-color: rgba(107,45,58,0.15);
+  color: var(--ink);
+}
+.sec-light .other-wrap input::placeholder { color: var(--mist); }
+
+/* survey help text inside light */
+.sec-light .inner > .reveal > p[style*="rgba(255,255,255"] { color: #5A5652 !important; }
+
+/* take-list items inside dark */
+.sec-dark .take-item-title { color: rgba(255,255,255,0.92); }
+.sec-dark .take-item-title em { color: rgba(220,180,160,0.85); }
+.sec-dark .take-item-body { color: rgba(255,255,255,0.55); }
+.sec-dark .take-item-body strong { color: rgba(255,255,255,0.85); }
+.sec-dark .take-divider { background: rgba(255,255,255,0.08); }
+.sec-dark .take-ps {
+  background: rgba(255,255,255,0.05) !important;
+  border-color: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.6);
+}
+.sec-dark .take-ps strong { color: rgba(220,180,160,0.85); }
+
+
+/* ══════════════════════════════════
+   RICH BOTANICAL & ORNAMENTAL DECOR
+══════════════════════════════════ */
+
+/* ─ Hero: additional watermark ornament ─ */
+.hero-top::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 200px; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(220,180,160,0.25), transparent);
+}
+
+/* ─ Full-width thin decorative rules between sections ─ */
+.sec-dark::before, .sec-light::before {
+  width: 160px; height: 160px;
+  top: -5px; left: -5px;
+}
+.sec-dark::after, .sec-light::after {
+  width: 160px; height: 160px;
+  bottom: -5px; right: -5px;
+}
+
+/* ─ Ornamental SVG sprigs — richer pine with cones ─ */
+/* Dark section corners */
+.sec-dark::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%23E0C8B0' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.22'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M106,43 Q96,24 118,20'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cpath d='M70,81 Q87,62 67,55'/%3E%3Cpath d='M86,66 Q104,47 84,41'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.5'/%3E%3Cellipse cx='95' cy='45' rx='2.5' ry='3.5' stroke-width='0.5' opacity='0.4'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%23E0C8B0' opacity='0.35'/%3E%3Ccircle cx='95' cy='45' r='1' fill='%23E0C8B0' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+}
+.sec-dark::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%23E0C8B0' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.22'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cpath d='M70,81 Q87,62 67,55'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.5'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%23E0C8B0' opacity='0.35'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Light section corners — burgundy */
+.sec-light::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%236B2D3A' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.18'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M106,43 Q96,24 118,20'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cpath d='M70,81 Q87,62 67,55'/%3E%3Cpath d='M86,66 Q104,47 84,41'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.45'/%3E%3Cellipse cx='95' cy='45' rx='2.5' ry='3.5' stroke-width='0.5' opacity='0.35'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%236B2D3A' opacity='0.3'/%3E%3Ccircle cx='95' cy='45' r='1' fill='%236B2D3A' opacity='0.25'/%3E%3C/g%3E%3C/svg%3E");
+}
+.sec-light::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%236B2D3A' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.18'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.45'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%236B2D3A' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ─ sec-rule gets inline ornamental flourish ─ */
+.sec-rule { position: relative; }
+
+/* ─ Mini-card decorative pin-stripe top border ─ */
+.mini-card-dark {
+  border-top: 1px solid rgba(220,180,160,0.2);
+}
+.mini-card-light {
+  border-top: 1px solid rgba(107,45,58,0.12);
+}
+
+/* ─ Ornamental divider between ww-day cards ─ */
+.ww-day-sep {
+  display: flex; align-items: center; gap: 8px;
+  padding: 0 0.5rem;
+}
+.ww-day-sep::before, .ww-day-sep::after {
+  content: ''; flex: 1; height: 0.5px;
+}
+.sec-light .ww-day-sep::before, .sec-light .ww-day-sep::after { background: rgba(107,45,58,0.1); }
+.sec-dark  .ww-day-sep::before, .sec-dark  .ww-day-sep::after { background: rgba(255,255,255,0.08); }
+.ww-day-sep-icon { font-size: 8px; opacity: 0.4; }
+
+/* ─ Floating botanical watermark in center of big sections ─ */
+.sec-watermark {
+  position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+  pointer-events: none; z-index: 0; opacity: 0.04;
+  width: 280px; height: 280px;
+}
+
+/* ─ Hero decorative band at bottom ─ */
+.hero-bottom-rule {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px; pointer-events: none;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(220,180,160,0.15) 20%,
+    rgba(220,180,160,0.35) 50%,
+    rgba(220,180,160,0.15) 80%,
+    transparent 100%);
+}
+
+/* ─ Section title decorative accent left ─ */
+.sec-title::before {
+  content: '';
+  display: inline-block;
+  width: 3px; height: 0.9em;
+  background: currentColor;
+  opacity: 0.15;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 2px;
+  transform: translateY(-1px);
+}
+
+/* ─ Footer enhanced ─ */
+.footer-orn-line { width: 70px; }
+
+/* ─ Dots row ornament ─ */
+.orn-dots {
+  display: flex; align-items: center; gap: 6px;
+  justify-content: center; margin: 1.25rem 0;
+}
+.orn-dots span {
+  width: 3px; height: 3px; border-radius: 50%;
+  background: rgba(220,180,160,0.4);
+}
+.orn-dots span:nth-child(2) { width: 5px; height: 5px; }
+.orn-dots-light span { background: rgba(107,45,58,0.25); }
+.orn-dots-light span:nth-child(2) { background: rgba(107,45,58,0.4); }
+
+@media (max-width:600px) {
+  .sec-dark::before, .sec-dark::after,
+  .sec-light::before, .sec-light::after {
+    width: 100px; height: 100px; opacity: 0.9;
+  }
+  .sec-watermark { width: 180px; height: 180px; }
+}
+
+/* ══════════════════════════════════
+   SPLASH SCREEN — envelope style
+══════════════════════════════════ */
+body { overflow: hidden; }
+body.splash-done { overflow-x: hidden; overflow-y: auto; }
+
+.splash {
+  position: fixed; inset: 0; z-index: 9999;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; padding: 2.5rem 1.5rem;
+  overflow: hidden;
+  transition: opacity 1s ease;
+  background-color: #F2EDE4;
+}
+
+/* Heavy grain texture */
+.splash::before {
+  content: '';
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.09'/%3E%3C/svg%3E");
+  background-size: 300px 300px;
+  mix-blend-mode: multiply;
+}
+
+/* Deep radial vignette */
+.splash::after {
+  content: '';
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(242,237,228,0) 20%, rgba(61,26,34,0.12) 70%, rgba(61,26,34,0.28) 100%);
+}
+
+/* Z-order wrapper for all content */
+.splash-above, .envelope-wrap, .splash-below { position: relative; z-index: 2; }
+
+/* Botanical corner SVGs */
+.splash-corner-svg {
+  position: absolute; pointer-events: none; z-index: 1;
+  width: 200px; height: 200px;
+}
+.splash-corner-svg.tl { top: -8px; left: -8px; opacity: 0.28; }
+.splash-corner-svg.tr { top: -8px; right: -8px; transform: scaleX(-1); opacity: 0.28; }
+.splash-corner-svg.bl { bottom: -8px; left: -8px; transform: scaleY(-1); opacity: 0.14; }
+.splash-corner-svg.br { bottom: -8px; right: -8px; transform: scale(-1); opacity: 0.14; }
+
+/* Small pine icon top center */
+.splash-pine-top {
+  position: relative; z-index: 2;
+  margin-bottom: 0.75rem;
+  animation: splashFadeUp 0.8s ease 0.05s both;
+  opacity: 0.7;
+}
+
+.splash.hiding { opacity: 0; pointer-events: none; }
+.splash.hidden { display: none; }
+
+/* ── ABOVE TEXT ── */
+.splash-above {
+  margin-bottom: 2.25rem;
+  animation: splashFadeUp 0.85s ease 0.2s both;
+}
+.splash-script {
+  font-family: var(--font-d); font-style: italic; font-weight: 300;
+  font-size: clamp(2.6rem, 9vw, 3.8rem);
+  color: rgba(61,26,34,0.28);
+  letter-spacing: 0.02em; line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
+.splash-title {
+  font-family: var(--font-b); font-size: 12px; font-weight: 600;
+  letter-spacing: 0.42em; text-transform: uppercase;
+  color: rgba(61,26,34,0.72);
+  margin-bottom: 0.85rem;
+}
+/* Ornamental rule */
+.splash-title-rule {
+  display: flex; align-items: center; gap: 10px; justify-content: center;
+}
+.splash-title-rule-line  { width: 40px; height: 0.5px; background: rgba(107,45,58,0.35); }
+.splash-title-rule-diamond {
+  width: 5px; height: 5px;
+  border: 0.5px solid rgba(107,45,58,0.5); transform: rotate(45deg);
+}
+.splash-title-rule-dot { width: 3px; height: 3px; border-radius: 50%; background: rgba(107,45,58,0.3); }
+
+/* Names */
+.splash-names {
+  font-family: var(--font-d); font-weight: 300;
+  font-size: clamp(1.6rem, 6vw, 2.4rem);
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(61,26,34,0.65); line-height: 1.2;
+  margin-top: 0.85rem;
+}
+.splash-names-amp {
+  font-style: italic; font-size: 0.65em; letter-spacing: 0.1em;
+  color: rgba(107,45,58,0.55); font-weight: 300;
+}
+
+/* ── ENVELOPE ── */
+.envelope-wrap {
+  position: relative;
+  width: min(calc(100% - 2.5rem), 480px);
+  aspect-ratio: 1.65 / 1;
+  cursor: pointer; flex-shrink: 0;
+  animation: splashFadeUp 0.85s ease 0.55s both;
+  filter:
+    drop-shadow(0 20px 50px rgba(61,26,34,0.28))
+    drop-shadow(0 4px 12px rgba(61,26,34,0.18))
+    drop-shadow(0 1px 3px rgba(61,26,34,0.12));
+}
+.env-body {
+  position: absolute; inset: 0;
+  background: linear-gradient(145deg, #4A1E2A 0%, #3D1A22 50%, #2E1219 100%);
+  border-radius: 18px; z-index: 0; overflow: hidden;
+}
+/* Subtle texture on envelope surface */
+.env-body::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+.env-back-bottom {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 56%;
+  clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+  background: rgba(0,0,0,0.18); z-index: 1;
+}
+.env-back-top {
+  position: absolute; top: 0; left: 0; right: 0; height: 56%;
+  clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+  background: rgba(0,0,0,0.12); z-index: 1;
+}
+.env-flap-left {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 52%;
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+  background: rgba(0,0,0,0.09); z-index: 1;
+}
+.env-flap-right {
+  position: absolute; right: 0; top: 0; bottom: 0; width: 52%;
+  clip-path: polygon(100% 0%, 0% 50%, 100% 100%);
+  background: rgba(0,0,0,0.09); z-index: 1;
+}
+.env-inner {
+  position: absolute; inset: 1px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 17px; z-index: 2;
+}
+/* Gold thin lines along fold edges */
+.env-inner::before {
+  content: '';
+  position: absolute; top: 0; left: 8%; right: 8%; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(220,180,130,0.15), transparent);
+}
+.env-inner::after {
+  content: '';
+  position: absolute; top: 50%; left: 0; right: 0; height: 0.5px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+}
+.env-flap-top {
+  position: absolute; top: 0; left: 0; right: 0; height: 56%;
+  border-radius: 18px 18px 0 0; overflow: hidden;
+  z-index: 5;
+  transform-origin: top center; transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+.env-flap-top-face {
+  position: absolute; inset: 0;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  background: linear-gradient(165deg, #5E2232 0%, #4A1B26 50%, #3D1522 100%);
+  backface-visibility: hidden;
+}
+.env-flap-top-face::before {
+  content: '';
+  position: absolute; inset: 0;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, transparent 50%);
+}
+.env-flap-top-face::after {
+  content: '';
+  position: absolute; inset: 0;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.18) 100%);
+}
+.envelope-wrap.opening .env-flap-top {
+  transform: perspective(800px) rotateX(-178deg);
+}
+.env-outline {
+  position: absolute; inset: 0;
+  border: 0.5px solid rgba(255,255,255,0.08);
+  border-radius: 18px; z-index: 6; pointer-events: none;
+}
+/* Diagonal fold lines (very subtle) */
+.env-fold-line-v {
+  position: absolute; top: 0; bottom: 0; left: 50%;
+  width: 0.5px;
+  background: linear-gradient(180deg, transparent, rgba(255,255,255,0.06) 30%, rgba(255,255,255,0.06) 70%, transparent);
+  z-index: 3; transform: translateX(-50%);
+}
+.env-fold-line-h {
+  position: absolute; left: 0; right: 0; top: 50%;
+  height: 0.5px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06) 30%, rgba(255,255,255,0.06) 70%, transparent);
+  z-index: 3; transform: translateY(-50%);
+}
+
+/* ── WAX SEAL ── */
+.wax-seal {
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 7; width: 84px; height: 84px;
+  cursor: pointer; transition: transform 0.35s ease;
+  filter:
+    drop-shadow(0 6px 16px rgba(0,0,0,0.5))
+    drop-shadow(0 2px 4px rgba(0,0,0,0.35));
+}
+.wax-seal:hover { transform: translate(-50%,-50%) scale(1.1); }
+.wax-seal.clicked { animation: sealPop 0.45s ease; }
+@keyframes sealPop {
+  0%   { transform: translate(-50%,-50%) scale(1); }
+  35%  { transform: translate(-50%,-50%) scale(0.82); }
+  70%  { transform: translate(-50%,-50%) scale(1.05); }
+  100% { transform: translate(-50%,-50%) scale(1); }
+}
+
+/* ── BELOW HINT ── */
+.splash-below {
+  margin-top: 2rem;
+  animation: splashFadeUp 0.85s ease 1s both;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+}
+.splash-hint {
+  font-family: var(--font-d); font-style: italic; font-weight: 300;
+  font-size: 16px; color: rgba(61,26,34,0.55);
+  line-height: 1.75; letter-spacing: 0.05em;
+  animation: splashHintPulse 3s ease 2s infinite;
+}
+/* Small arrow down */
+.splash-hint-arrow {
+  width: 1px; height: 28px;
+  background: linear-gradient(to bottom, rgba(107,45,58,0.4), transparent);
+  animation: splashHintPulse 3s ease 2s infinite;
+}
+@keyframes splashHintPulse { 0%,100%{opacity:.55;} 50%{opacity:1;} }
+
+@keyframes splashFadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+/* ══════════════════════════════════
+   RICH BOTANICAL & ORNAMENTAL DECOR
+══════════════════════════════════ */
+
+/* ─ Hero: additional watermark ornament ─ */
+.hero-top::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 200px; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(220,180,160,0.25), transparent);
+}
+
+/* ─ Full-width thin decorative rules between sections ─ */
+.sec-dark::before, .sec-light::before {
+  width: 160px; height: 160px;
+  top: -5px; left: -5px;
+}
+.sec-dark::after, .sec-light::after {
+  width: 160px; height: 160px;
+  bottom: -5px; right: -5px;
+}
+
+/* ─ Ornamental SVG sprigs — richer pine with cones ─ */
+/* Dark section corners */
+.sec-dark::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%23E0C8B0' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.22'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M106,43 Q96,24 118,20'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cpath d='M70,81 Q87,62 67,55'/%3E%3Cpath d='M86,66 Q104,47 84,41'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.5'/%3E%3Cellipse cx='95' cy='45' rx='2.5' ry='3.5' stroke-width='0.5' opacity='0.4'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%23E0C8B0' opacity='0.35'/%3E%3Ccircle cx='95' cy='45' r='1' fill='%23E0C8B0' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+}
+.sec-dark::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%23E0C8B0' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.22'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cpath d='M70,81 Q87,62 67,55'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.5'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%23E0C8B0' opacity='0.35'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Light section corners — burgundy */
+.sec-light::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%236B2D3A' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.18'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M106,43 Q96,24 118,20'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cpath d='M70,81 Q87,62 67,55'/%3E%3Cpath d='M86,66 Q104,47 84,41'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.45'/%3E%3Cellipse cx='95' cy='45' rx='2.5' ry='3.5' stroke-width='0.5' opacity='0.35'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%236B2D3A' opacity='0.3'/%3E%3Ccircle cx='95' cy='45' r='1' fill='%236B2D3A' opacity='0.25'/%3E%3C/g%3E%3C/svg%3E");
+}
+.sec-light::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%236B2D3A' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.18'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.45'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%236B2D3A' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ─ sec-rule gets inline ornamental flourish ─ */
+.sec-rule { position: relative; }
+
+/* ─ Mini-card decorative pin-stripe top border ─ */
+.mini-card-dark {
+  border-top: 1px solid rgba(220,180,160,0.2);
+}
+.mini-card-light {
+  border-top: 1px solid rgba(107,45,58,0.12);
+}
+
+/* ─ Ornamental divider between ww-day cards ─ */
+.ww-day-sep {
+  display: flex; align-items: center; gap: 8px;
+  padding: 0 0.5rem;
+}
+.ww-day-sep::before, .ww-day-sep::after {
+  content: ''; flex: 1; height: 0.5px;
+}
+.sec-light .ww-day-sep::before, .sec-light .ww-day-sep::after { background: rgba(107,45,58,0.1); }
+.sec-dark  .ww-day-sep::before, .sec-dark  .ww-day-sep::after { background: rgba(255,255,255,0.08); }
+.ww-day-sep-icon { font-size: 8px; opacity: 0.4; }
+
+/* ─ Floating botanical watermark in center of big sections ─ */
+.sec-watermark {
+  position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+  pointer-events: none; z-index: 0; opacity: 0.04;
+  width: 280px; height: 280px;
+}
+
+/* ─ Hero decorative band at bottom ─ */
+.hero-bottom-rule {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px; pointer-events: none;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(220,180,160,0.15) 20%,
+    rgba(220,180,160,0.35) 50%,
+    rgba(220,180,160,0.15) 80%,
+    transparent 100%);
+}
+
+/* ─ Section title decorative accent left ─ */
+.sec-title::before {
+  content: '';
+  display: inline-block;
+  width: 3px; height: 0.9em;
+  background: currentColor;
+  opacity: 0.15;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 2px;
+  transform: translateY(-1px);
+}
+
+/* ─ Footer enhanced ─ */
+.footer-orn-line { width: 70px; }
+
+/* ─ Dots row ornament ─ */
+.orn-dots {
+  display: flex; align-items: center; gap: 6px;
+  justify-content: center; margin: 1.25rem 0;
+}
+.orn-dots span {
+  width: 3px; height: 3px; border-radius: 50%;
+  background: rgba(220,180,160,0.4);
+}
+.orn-dots span:nth-child(2) { width: 5px; height: 5px; }
+.orn-dots-light span { background: rgba(107,45,58,0.25); }
+.orn-dots-light span:nth-child(2) { background: rgba(107,45,58,0.4); }
+
+@media (max-width:600px) {
+  .sec-dark::before, .sec-dark::after,
+  .sec-light::before, .sec-light::after {
+    width: 100px; height: 100px; opacity: 0.9;
+  }
+  .sec-watermark { width: 180px; height: 180px; }
+}
+
+/* ══════════════════════════════════
+   SPLASH SCREEN — envelope style
+══════════════════════════════════ */
+body { overflow: hidden; }
+body.splash-done { overflow-x: hidden; overflow-y: auto; }
+
+.splash {
+  position: fixed; inset: 0; z-index: 9999;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; padding: 2.5rem 1.5rem;
+  overflow: hidden;
+  transition: opacity 0.9s ease;
+  /* Layered background: cream + noise + subtle radial vignette */
+  background-color: #F5F0E8;
+}
+
+/* Linen/grain texture */
+.splash::before {
+  content: '';
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.055'/%3E%3C/svg%3E");
+  background-size: 400px 400px;
+}
+
+/* Radial vignette — darker corners, lighter centre */
+.splash::after {
+  content: '';
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: radial-gradient(ellipse at 50% 50%,
+    rgba(245,240,232,0) 0%,
+    rgba(61,26,34,0.06) 60%,
+    rgba(61,26,34,0.14) 100%);
+}
+
+/* Botanical corner SVGs — top-left & bottom-right */
+.splash-corner-svg {
+  position: absolute; pointer-events: none; z-index: 1;
+  width: 160px; height: 160px; opacity: 0.22;
+}
+.splash-corner-svg.tl { top: 0; left: 0; }
+.splash-corner-svg.br { bottom: 0; right: 0; transform: scale(-1); }
+
+/* All content above bg layers */
+.splash-above,
+.envelope-wrap,
+.splash-below { position: relative; z-index: 2; }
+
+.splash.hiding { opacity: 0; pointer-events: none; }
+.splash.hidden { display: none; }
+
+/* ── Above text ── */
+.splash-above {
+  margin-bottom: 2rem;
+  animation: splashFadeUp 0.9s ease 0.15s both;
+}
+.splash-script {
+  font-family: var(--font-d); font-style: italic; font-weight: 300;
+  font-size: clamp(2rem, 7vw, 2.8rem);
+  color: rgba(61,26,34,0.3);
+  letter-spacing: 0.03em; line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+.splash-title {
+  font-family: var(--font-b); font-size: 11px; font-weight: 500;
+  letter-spacing: 0.38em; text-transform: uppercase;
+  color: rgba(61,26,34,0.65);
+}
+/* Thin ornamental rule under title */
+.splash-title-rule {
+  display: flex; align-items: center; gap: 8px;
+  justify-content: center; margin-top: 0.75rem;
+}
+.splash-title-rule-line { width: 30px; height: 0.5px; background: rgba(107,45,58,0.3); }
+.splash-title-rule-diamond {
+  width: 4px; height: 4px;
+  border: 0.5px solid rgba(107,45,58,0.4);
+  transform: rotate(45deg);
+}
+
+/* ── Envelope ── */
+.envelope-wrap {
+  position: relative;
+  width: min(calc(100% - 2.5rem), 480px);
+  aspect-ratio: 1.65 / 1;
+  cursor: pointer;
+  flex-shrink: 0;
+  animation: splashFadeUp 0.9s ease 0.35s both;
+  filter: drop-shadow(0 12px 36px rgba(61,26,34,0.22)) drop-shadow(0 2px 8px rgba(61,26,34,0.12));
+}
+.env-body {
+  position: absolute; inset: 0;
+  background: var(--wine);
+  border-radius: 16px; z-index: 0; overflow: hidden;
+}
+.env-back-bottom {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 55%;
+  clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+  background: rgba(0,0,0,0.15); z-index: 1;
+}
+.env-back-top {
+  position: absolute; top: 0; left: 0; right: 0; height: 55%;
+  clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+  background: rgba(0,0,0,0.1); z-index: 1;
+}
+.env-flap-left {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 52%;
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+  background: rgba(0,0,0,0.07); z-index: 1;
+}
+.env-flap-right {
+  position: absolute; right: 0; top: 0; bottom: 0; width: 52%;
+  clip-path: polygon(100% 0%, 0% 50%, 100% 100%);
+  background: rgba(0,0,0,0.07); z-index: 1;
+}
+.env-inner {
+  position: absolute; inset: 1px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px; z-index: 2;
+}
+/* Subtle light line along top edge */
+.env-inner::before {
+  content: '';
+  position: absolute; top: 0; left: 8%; right: 8%; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+}
+.env-flap-top {
+  position: absolute; top: 0; left: 0; right: 0; height: 55%;
+  border-radius: 16px 16px 0 0; overflow: hidden;
+  z-index: 5;
+  transform-origin: top center;
+  transform-style: preserve-3d;
+  transition: transform 0.75s cubic-bezier(0.4,0,0.2,1);
+}
+.env-flap-top-face {
+  position: absolute; inset: 0;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  background: linear-gradient(170deg, #5A1F2C 0%, #3D1A22 100%);
+  backface-visibility: hidden;
+}
+.env-flap-top-face::after {
+  content: '';
+  position: absolute; inset: 0;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,0.07) 0%, rgba(0,0,0,0.14) 100%);
+}
+.envelope-wrap.opening .env-flap-top {
+  transform: perspective(700px) rotateX(-178deg);
+}
+.env-outline {
+  position: absolute; inset: 0;
+  border: 0.5px solid rgba(255,255,255,0.1);
+  border-radius: 16px; z-index: 6; pointer-events: none;
+}
+.env-fold-line-v {
+  position: absolute; top: 0; bottom: 0; left: 50%;
+  width: 0.5px; background: rgba(255,255,255,0.05); z-index: 3;
+  transform: translateX(-50%);
+}
+.env-fold-line-h {
+  position: absolute; left: 0; right: 0; top: 50%;
+  height: 0.5px; background: rgba(255,255,255,0.05); z-index: 3;
+  transform: translateY(-50%);
+}
+
+/* ── Wax seal ── */
+.wax-seal {
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 7; width: 76px; height: 76px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4)) drop-shadow(0 1px 3px rgba(0,0,0,0.3));
+}
+.wax-seal:hover { transform: translate(-50%,-50%) scale(1.08); }
+.wax-seal.clicked { animation: sealPop 0.4s ease; }
+@keyframes sealPop {
+  0%   { transform: translate(-50%,-50%) scale(1); }
+  40%  { transform: translate(-50%,-50%) scale(0.84); }
+  100% { transform: translate(-50%,-50%) scale(1); }
+}
+
+/* ── Hint below ── */
+.splash-below {
+  margin-top: 1.75rem;
+  animation: splashFadeUp 0.9s ease 0.85s both;
+}
+.splash-hint {
+  font-family: var(--font-d); font-style: italic; font-weight: 300;
+  font-size: 15px; color: rgba(61,26,34,0.5);
+  line-height: 1.8; letter-spacing: 0.04em;
+  animation: splashHintPulse 3s ease 1.5s infinite;
+}
+@keyframes splashHintPulse { 0%,100%{opacity:.6;} 50%{opacity:1;} }
+
+@keyframes splashFadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ══════════════════════════════════
+   RICH BOTANICAL & ORNAMENTAL DECOR
+══════════════════════════════════ */
+
+/* ─ Hero: additional watermark ornament ─ */
+.hero-top::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 200px; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(220,180,160,0.25), transparent);
+}
+
+/* ─ Full-width thin decorative rules between sections ─ */
+.sec-dark::before, .sec-light::before {
+  width: 160px; height: 160px;
+  top: -5px; left: -5px;
+}
+.sec-dark::after, .sec-light::after {
+  width: 160px; height: 160px;
+  bottom: -5px; right: -5px;
+}
+
+/* ─ Ornamental SVG sprigs — richer pine with cones ─ */
+/* Dark section corners */
+.sec-dark::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%23E0C8B0' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.22'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M106,43 Q96,24 118,20'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cpath d='M70,81 Q87,62 67,55'/%3E%3Cpath d='M86,66 Q104,47 84,41'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.5'/%3E%3Cellipse cx='95' cy='45' rx='2.5' ry='3.5' stroke-width='0.5' opacity='0.4'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%23E0C8B0' opacity='0.35'/%3E%3Ccircle cx='95' cy='45' r='1' fill='%23E0C8B0' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+}
+.sec-dark::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%23E0C8B0' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.22'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cpath d='M70,81 Q87,62 67,55'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.5'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%23E0C8B0' opacity='0.35'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Light section corners — burgundy */
+.sec-light::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%236B2D3A' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.18'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M106,43 Q96,24 118,20'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cpath d='M70,81 Q87,62 67,55'/%3E%3Cpath d='M86,66 Q104,47 84,41'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.45'/%3E%3Cellipse cx='95' cy='45' rx='2.5' ry='3.5' stroke-width='0.5' opacity='0.35'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%236B2D3A' opacity='0.3'/%3E%3Ccircle cx='95' cy='45' r='1' fill='%236B2D3A' opacity='0.25'/%3E%3C/g%3E%3C/svg%3E");
+}
+.sec-light::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%236B2D3A' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.18'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.45'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%236B2D3A' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ─ sec-rule gets inline ornamental flourish ─ */
+.sec-rule { position: relative; }
+
+/* ─ Mini-card decorative pin-stripe top border ─ */
+.mini-card-dark {
+  border-top: 1px solid rgba(220,180,160,0.2);
+}
+.mini-card-light {
+  border-top: 1px solid rgba(107,45,58,0.12);
+}
+
+/* ─ Ornamental divider between ww-day cards ─ */
+.ww-day-sep {
+  display: flex; align-items: center; gap: 8px;
+  padding: 0 0.5rem;
+}
+.ww-day-sep::before, .ww-day-sep::after {
+  content: ''; flex: 1; height: 0.5px;
+}
+.sec-light .ww-day-sep::before, .sec-light .ww-day-sep::after { background: rgba(107,45,58,0.1); }
+.sec-dark  .ww-day-sep::before, .sec-dark  .ww-day-sep::after { background: rgba(255,255,255,0.08); }
+.ww-day-sep-icon { font-size: 8px; opacity: 0.4; }
+
+/* ─ Floating botanical watermark in center of big sections ─ */
+.sec-watermark {
+  position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+  pointer-events: none; z-index: 0; opacity: 0.04;
+  width: 280px; height: 280px;
+}
+
+/* ─ Hero decorative band at bottom ─ */
+.hero-bottom-rule {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px; pointer-events: none;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(220,180,160,0.15) 20%,
+    rgba(220,180,160,0.35) 50%,
+    rgba(220,180,160,0.15) 80%,
+    transparent 100%);
+}
+
+/* ─ Section title decorative accent left ─ */
+.sec-title::before {
+  content: '';
+  display: inline-block;
+  width: 3px; height: 0.9em;
+  background: currentColor;
+  opacity: 0.15;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 2px;
+  transform: translateY(-1px);
+}
+
+/* ─ Footer enhanced ─ */
+.footer-orn-line { width: 70px; }
+
+/* ─ Dots row ornament ─ */
+.orn-dots {
+  display: flex; align-items: center; gap: 6px;
+  justify-content: center; margin: 1.25rem 0;
+}
+.orn-dots span {
+  width: 3px; height: 3px; border-radius: 50%;
+  background: rgba(220,180,160,0.4);
+}
+.orn-dots span:nth-child(2) { width: 5px; height: 5px; }
+.orn-dots-light span { background: rgba(107,45,58,0.25); }
+.orn-dots-light span:nth-child(2) { background: rgba(107,45,58,0.4); }
+
+@media (max-width:600px) {
+  .sec-dark::before, .sec-dark::after,
+  .sec-light::before, .sec-light::after {
+    width: 100px; height: 100px; opacity: 0.9;
+  }
+  .sec-watermark { width: 180px; height: 180px; }
+}
+
+/* ══════════════════════════════════
+   SPLASH SCREEN — envelope style
+══════════════════════════════════ */
+body { overflow: hidden; }
+body.splash-done { overflow-x: hidden; overflow-y: auto; }
+
+.splash {
+  position: fixed; inset: 0; z-index: 9999;
+  background: #FAF8F5;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; padding: 0;
+  min-height: 100dvh; min-height: 100vh;
+  overflow: hidden;
+  transition: opacity 0.9s ease;
+}
+.splash.hiding { opacity: 0; pointer-events: none; }
+.splash.hidden { display: none; }
+
+/* Text above */
+.splash-above {
+  margin-bottom: 1.5rem;
+  animation: splashFadeUp 0.9s ease 0.15s both;
+}
+.splash-script {
+  font-family: var(--font-d); font-style: italic; font-weight: 300;
+  font-size: clamp(1.4rem, 5vw, 2rem);
+  color: rgba(61,26,34,0.22); letter-spacing: 0.04em; margin-bottom: 0.5rem;
+}
+.splash-title {
+  font-family: var(--font-b); font-size: 10px; font-weight: 500;
+  letter-spacing: 0.32em; text-transform: uppercase;
+  color: rgba(61,26,34,0.5);
+}
+
+/* ENVELOPE — wide landscape rectangle */
+.envelope-wrap {
+  position: relative;
+  width: calc(100% - 2.5rem);
+  aspect-ratio: 1.6 / 1;
+  cursor: pointer;
+  flex-shrink: 0;
+  animation: splashFadeUp 0.9s ease 0.35s both;
+}
+
+/* Back bottom diamond */
+.env-back-bottom {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 55%;
+  clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+  background: rgba(0,0,0,0.12);
+  z-index: 1;
+}
+/* Back top diamond */
+.env-back-top {
+  position: absolute; top: 0; left: 0; right: 0; height: 55%;
+  clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+  background: rgba(0,0,0,0.08);
+  z-index: 1;
+}
+/* Side flaps */
+.env-flap-left {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 52%;
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+  background: rgba(0,0,0,0.06);
+  z-index: 1;
+}
+.env-flap-right {
+  position: absolute; right: 0; top: 0; bottom: 0; width: 52%;
+  clip-path: polygon(100% 0%, 0% 50%, 100% 100%);
+  background: rgba(0,0,0,0.06);
+  z-index: 1;
+}
+
+/* Main envelope body — burgundy */
+.env-body {
+  position: absolute; inset: 0;
+  background: var(--wine);
+  border-radius: 16px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Inner (lighter, visible behind flaps) */
+.env-inner {
+  position: absolute; inset: 1px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 15px; z-index: 2;
+}
+
+/* Top opening flap */
+.env-flap-top {
+  position: absolute; top: 0; left: 0; right: 0; height: 55%;
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+  z-index: 5;
+  transform-origin: top center;
+  transform-style: preserve-3d;
+  transition: transform 0.75s cubic-bezier(0.4,0,0.2,1);
+}
+.env-flap-top-face {
+  position: absolute; inset: 0;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  background: linear-gradient(170deg, #5A1F2C 0%, #3D1A22 100%);
+  backface-visibility: hidden;
+}
+.env-flap-top-face::after {
+  content: '';
+  position: absolute; inset: 0;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0.12) 100%);
+}
+.envelope-wrap.opening .env-flap-top {
+  transform: perspective(700px) rotateX(-178deg);
+}
+
+/* Outline border */
+.env-outline {
+  position: absolute; inset: 0;
+  border: 0.5px solid rgba(255,255,255,0.08);
+  border-radius: 16px; z-index: 6; pointer-events: none;
+}
+
+/* Inner fold lines (subtle X pattern) */
+.env-fold-line-v {
+  position: absolute; top: 0; bottom: 0; left: 50%;
+  width: 0.5px; background: rgba(255,255,255,0.06); z-index: 3;
+  transform: translateX(-50%);
+}
+.env-fold-line-h {
+  position: absolute; left: 0; right: 0; top: 50%;
+  height: 0.5px; background: rgba(255,255,255,0.06); z-index: 3;
+  transform: translateY(-50%);
+}
+
+/* Wax seal centered */
+.wax-seal {
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 7;
+  width: 72px; height: 72px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 3px 10px rgba(0,0,0,0.35));
+}
+.wax-seal:hover { transform: translate(-50%,-50%) scale(1.07); }
+.wax-seal.clicked { animation: sealPop 0.4s ease; }
+@keyframes sealPop {
+  0%   { transform: translate(-50%,-50%) scale(1); }
+  40%  { transform: translate(-50%,-50%) scale(0.85); }
+  100% { transform: translate(-50%,-50%) scale(1); }
+}
+
+/* Hint below */
+.splash-below {
+  margin-top: 1.5rem;
+  animation: splashFadeUp 0.9s ease 0.85s both;
+}
+.splash-hint {
+  font-family: var(--font-d); font-style: italic; font-weight: 300;
+  font-size: 14px; color: rgba(61,26,34,0.4);
+  line-height: 1.8; letter-spacing: 0.04em;
+  animation: splashHintPulse 3s ease 1.5s infinite;
+}
+@keyframes splashHintPulse { 0%,100%{opacity:.65;} 50%{opacity:1;} }
+
+@keyframes splashFadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ══════════════════════════════════
+   RICH BOTANICAL & ORNAMENTAL DECOR
+══════════════════════════════════ */
+
+/* ─ Hero: additional watermark ornament ─ */
+.hero-top::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 200px; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(220,180,160,0.25), transparent);
+}
+
+/* ─ Full-width thin decorative rules between sections ─ */
+.sec-dark::before, .sec-light::before {
+  width: 160px; height: 160px;
+  top: -5px; left: -5px;
+}
+.sec-dark::after, .sec-light::after {
+  width: 160px; height: 160px;
+  bottom: -5px; right: -5px;
+}
+
+/* ─ Ornamental SVG sprigs — richer pine with cones ─ */
+/* Dark section corners */
+.sec-dark::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%23E0C8B0' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.22'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M106,43 Q96,24 118,20'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cpath d='M70,81 Q87,62 67,55'/%3E%3Cpath d='M86,66 Q104,47 84,41'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.5'/%3E%3Cellipse cx='95' cy='45' rx='2.5' ry='3.5' stroke-width='0.5' opacity='0.4'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%23E0C8B0' opacity='0.35'/%3E%3Ccircle cx='95' cy='45' r='1' fill='%23E0C8B0' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+}
+.sec-dark::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%23E0C8B0' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.22'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cpath d='M70,81 Q87,62 67,55'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.5'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%23E0C8B0' opacity='0.35'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Light section corners — burgundy */
+.sec-light::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%236B2D3A' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.18'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M106,43 Q96,24 118,20'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cpath d='M70,81 Q87,62 67,55'/%3E%3Cpath d='M86,66 Q104,47 84,41'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.45'/%3E%3Cellipse cx='95' cy='45' rx='2.5' ry='3.5' stroke-width='0.5' opacity='0.35'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%236B2D3A' opacity='0.3'/%3E%3Ccircle cx='95' cy='45' r='1' fill='%236B2D3A' opacity='0.25'/%3E%3C/g%3E%3C/svg%3E");
+}
+.sec-light::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%236B2D3A' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.18'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.45'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%236B2D3A' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ─ sec-rule gets inline ornamental flourish ─ */
+.sec-rule { position: relative; }
+
+/* ─ Mini-card decorative pin-stripe top border ─ */
+.mini-card-dark {
+  border-top: 1px solid rgba(220,180,160,0.2);
+}
+.mini-card-light {
+  border-top: 1px solid rgba(107,45,58,0.12);
+}
+
+/* ─ Ornamental divider between ww-day cards ─ */
+.ww-day-sep {
+  display: flex; align-items: center; gap: 8px;
+  padding: 0 0.5rem;
+}
+.ww-day-sep::before, .ww-day-sep::after {
+  content: ''; flex: 1; height: 0.5px;
+}
+.sec-light .ww-day-sep::before, .sec-light .ww-day-sep::after { background: rgba(107,45,58,0.1); }
+.sec-dark  .ww-day-sep::before, .sec-dark  .ww-day-sep::after { background: rgba(255,255,255,0.08); }
+.ww-day-sep-icon { font-size: 8px; opacity: 0.4; }
+
+/* ─ Floating botanical watermark in center of big sections ─ */
+.sec-watermark {
+  position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+  pointer-events: none; z-index: 0; opacity: 0.04;
+  width: 280px; height: 280px;
+}
+
+/* ─ Hero decorative band at bottom ─ */
+.hero-bottom-rule {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px; pointer-events: none;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(220,180,160,0.15) 20%,
+    rgba(220,180,160,0.35) 50%,
+    rgba(220,180,160,0.15) 80%,
+    transparent 100%);
+}
+
+/* ─ Section title decorative accent left ─ */
+.sec-title::before {
+  content: '';
+  display: inline-block;
+  width: 3px; height: 0.9em;
+  background: currentColor;
+  opacity: 0.15;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 2px;
+  transform: translateY(-1px);
+}
+
+/* ─ Footer enhanced ─ */
+.footer-orn-line { width: 70px; }
+
+/* ─ Dots row ornament ─ */
+.orn-dots {
+  display: flex; align-items: center; gap: 6px;
+  justify-content: center; margin: 1.25rem 0;
+}
+.orn-dots span {
+  width: 3px; height: 3px; border-radius: 50%;
+  background: rgba(220,180,160,0.4);
+}
+.orn-dots span:nth-child(2) { width: 5px; height: 5px; }
+.orn-dots-light span { background: rgba(107,45,58,0.25); }
+.orn-dots-light span:nth-child(2) { background: rgba(107,45,58,0.4); }
+
+@media (max-width:600px) {
+  .sec-dark::before, .sec-dark::after,
+  .sec-light::before, .sec-light::after {
+    width: 100px; height: 100px; opacity: 0.9;
+  }
+  .sec-watermark { width: 180px; height: 180px; }
+}
+
+/* ══════════════════════════════════
+   RICH BOTANICAL & ORNAMENTAL DECOR
+══════════════════════════════════ */
+
+/* ─ Hero: additional watermark ornament ─ */
+.hero-top::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 200px; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(220,180,160,0.25), transparent);
+}
+
+/* ─ Full-width thin decorative rules between sections ─ */
+.sec-dark::before, .sec-light::before {
+  width: 160px; height: 160px;
+  top: -5px; left: -5px;
+}
+.sec-dark::after, .sec-light::after {
+  width: 160px; height: 160px;
+  bottom: -5px; right: -5px;
+}
+
+/* ─ Ornamental SVG sprigs — richer pine with cones ─ */
+/* Dark section corners */
+.sec-dark::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%23E0C8B0' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.22'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M106,43 Q96,24 118,20'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cpath d='M70,81 Q87,62 67,55'/%3E%3Cpath d='M86,66 Q104,47 84,41'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.5'/%3E%3Cellipse cx='95' cy='45' rx='2.5' ry='3.5' stroke-width='0.5' opacity='0.4'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%23E0C8B0' opacity='0.35'/%3E%3Ccircle cx='95' cy='45' r='1' fill='%23E0C8B0' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+}
+.sec-dark::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%23E0C8B0' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.22'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cpath d='M70,81 Q87,62 67,55'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.5'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%23E0C8B0' opacity='0.35'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Light section corners — burgundy */
+.sec-light::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%236B2D3A' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.18'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M106,43 Q96,24 118,20'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cpath d='M70,81 Q87,62 67,55'/%3E%3Cpath d='M86,66 Q104,47 84,41'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.45'/%3E%3Cellipse cx='95' cy='45' rx='2.5' ry='3.5' stroke-width='0.5' opacity='0.35'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%236B2D3A' opacity='0.3'/%3E%3Ccircle cx='95' cy='45' r='1' fill='%236B2D3A' opacity='0.25'/%3E%3C/g%3E%3C/svg%3E");
+}
+.sec-light::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%236B2D3A' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.18'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.45'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%236B2D3A' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ─ sec-rule gets inline ornamental flourish ─ */
+.sec-rule { position: relative; }
+
+/* ─ Mini-card decorative pin-stripe top border ─ */
+.mini-card-dark {
+  border-top: 1px solid rgba(220,180,160,0.2);
+}
+.mini-card-light {
+  border-top: 1px solid rgba(107,45,58,0.12);
+}
+
+/* ─ Ornamental divider between ww-day cards ─ */
+.ww-day-sep {
+  display: flex; align-items: center; gap: 8px;
+  padding: 0 0.5rem;
+}
+.ww-day-sep::before, .ww-day-sep::after {
+  content: ''; flex: 1; height: 0.5px;
+}
+.sec-light .ww-day-sep::before, .sec-light .ww-day-sep::after { background: rgba(107,45,58,0.1); }
+.sec-dark  .ww-day-sep::before, .sec-dark  .ww-day-sep::after { background: rgba(255,255,255,0.08); }
+.ww-day-sep-icon { font-size: 8px; opacity: 0.4; }
+
+/* ─ Floating botanical watermark in center of big sections ─ */
+.sec-watermark {
+  position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+  pointer-events: none; z-index: 0; opacity: 0.04;
+  width: 280px; height: 280px;
+}
+
+/* ─ Hero decorative band at bottom ─ */
+.hero-bottom-rule {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px; pointer-events: none;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(220,180,160,0.15) 20%,
+    rgba(220,180,160,0.35) 50%,
+    rgba(220,180,160,0.15) 80%,
+    transparent 100%);
+}
+
+/* ─ Section title decorative accent left ─ */
+.sec-title::before {
+  content: '';
+  display: inline-block;
+  width: 3px; height: 0.9em;
+  background: currentColor;
+  opacity: 0.15;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 2px;
+  transform: translateY(-1px);
+}
+
+/* ─ Footer enhanced ─ */
+.footer-orn-line { width: 70px; }
+
+/* ─ Dots row ornament ─ */
+.orn-dots {
+  display: flex; align-items: center; gap: 6px;
+  justify-content: center; margin: 1.25rem 0;
+}
+.orn-dots span {
+  width: 3px; height: 3px; border-radius: 50%;
+  background: rgba(220,180,160,0.4);
+}
+.orn-dots span:nth-child(2) { width: 5px; height: 5px; }
+.orn-dots-light span { background: rgba(107,45,58,0.25); }
+.orn-dots-light span:nth-child(2) { background: rgba(107,45,58,0.4); }
+
+@media (max-width:600px) {
+  .sec-dark::before, .sec-dark::after,
+  .sec-light::before, .sec-light::after {
+    width: 100px; height: 100px; opacity: 0.9;
+  }
+  .sec-watermark { width: 180px; height: 180px; }
+}
+
+/* ══════════════════════════════════
+   RICH BOTANICAL & ORNAMENTAL DECOR
+══════════════════════════════════ */
+
+/* ─ Hero: additional watermark ornament ─ */
+.hero-top::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 200px; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(220,180,160,0.25), transparent);
+}
+
+/* ─ Full-width thin decorative rules between sections ─ */
+.sec-dark::before, .sec-light::before {
+  width: 160px; height: 160px;
+  top: -5px; left: -5px;
+}
+.sec-dark::after, .sec-light::after {
+  width: 160px; height: 160px;
+  bottom: -5px; right: -5px;
+}
+
+/* ─ Ornamental SVG sprigs — richer pine with cones ─ */
+/* Dark section corners */
+.sec-dark::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%23E0C8B0' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.22'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M106,43 Q96,24 118,20'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cpath d='M70,81 Q87,62 67,55'/%3E%3Cpath d='M86,66 Q104,47 84,41'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.5'/%3E%3Cellipse cx='95' cy='45' rx='2.5' ry='3.5' stroke-width='0.5' opacity='0.4'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%23E0C8B0' opacity='0.35'/%3E%3Ccircle cx='95' cy='45' r='1' fill='%23E0C8B0' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+}
+.sec-dark::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%23E0C8B0' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.22'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cpath d='M70,81 Q87,62 67,55'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.5'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%23E0C8B0' opacity='0.35'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Light section corners — burgundy */
+.sec-light::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%236B2D3A' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.18'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M106,43 Q96,24 118,20'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cpath d='M70,81 Q87,62 67,55'/%3E%3Cpath d='M86,66 Q104,47 84,41'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.45'/%3E%3Cellipse cx='95' cy='45' rx='2.5' ry='3.5' stroke-width='0.5' opacity='0.35'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%236B2D3A' opacity='0.3'/%3E%3Ccircle cx='95' cy='45' r='1' fill='%236B2D3A' opacity='0.25'/%3E%3C/g%3E%3C/svg%3E");
+}
+.sec-light::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%236B2D3A' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.18'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.45'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%236B2D3A' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ─ sec-rule gets inline ornamental flourish ─ */
+.sec-rule { position: relative; }
+
+/* ─ Mini-card decorative pin-stripe top border ─ */
+.mini-card-dark {
+  border-top: 1px solid rgba(220,180,160,0.2);
+}
+.mini-card-light {
+  border-top: 1px solid rgba(107,45,58,0.12);
+}
+
+/* ─ Ornamental divider between ww-day cards ─ */
+.ww-day-sep {
+  display: flex; align-items: center; gap: 8px;
+  padding: 0 0.5rem;
+}
+.ww-day-sep::before, .ww-day-sep::after {
+  content: ''; flex: 1; height: 0.5px;
+}
+.sec-light .ww-day-sep::before, .sec-light .ww-day-sep::after { background: rgba(107,45,58,0.1); }
+.sec-dark  .ww-day-sep::before, .sec-dark  .ww-day-sep::after { background: rgba(255,255,255,0.08); }
+.ww-day-sep-icon { font-size: 8px; opacity: 0.4; }
+
+/* ─ Floating botanical watermark in center of big sections ─ */
+.sec-watermark {
+  position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+  pointer-events: none; z-index: 0; opacity: 0.04;
+  width: 280px; height: 280px;
+}
+
+/* ─ Hero decorative band at bottom ─ */
+.hero-bottom-rule {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px; pointer-events: none;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(220,180,160,0.15) 20%,
+    rgba(220,180,160,0.35) 50%,
+    rgba(220,180,160,0.15) 80%,
+    transparent 100%);
+}
+
+/* ─ Section title decorative accent left ─ */
+.sec-title::before {
+  content: '';
+  display: inline-block;
+  width: 3px; height: 0.9em;
+  background: currentColor;
+  opacity: 0.15;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 2px;
+  transform: translateY(-1px);
+}
+
+/* ─ Footer enhanced ─ */
+.footer-orn-line { width: 70px; }
+
+/* ─ Dots row ornament ─ */
+.orn-dots {
+  display: flex; align-items: center; gap: 6px;
+  justify-content: center; margin: 1.25rem 0;
+}
+.orn-dots span {
+  width: 3px; height: 3px; border-radius: 50%;
+  background: rgba(220,180,160,0.4);
+}
+.orn-dots span:nth-child(2) { width: 5px; height: 5px; }
+.orn-dots-light span { background: rgba(107,45,58,0.25); }
+.orn-dots-light span:nth-child(2) { background: rgba(107,45,58,0.4); }
+
+@media (max-width:600px) {
+  .sec-dark::before, .sec-dark::after,
+  .sec-light::before, .sec-light::after {
+    width: 100px; height: 100px; opacity: 0.9;
+  }
+  .sec-watermark { width: 180px; height: 180px; }
+}
+
+/* ══════════════════════════════════
+   RICH BOTANICAL & ORNAMENTAL DECOR
+══════════════════════════════════ */
+
+/* ─ Hero: additional watermark ornament ─ */
+.hero-top::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 200px; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(220,180,160,0.25), transparent);
+}
+
+/* ─ Full-width thin decorative rules between sections ─ */
+.sec-dark::before, .sec-light::before {
+  width: 160px; height: 160px;
+  top: -5px; left: -5px;
+}
+.sec-dark::after, .sec-light::after {
+  width: 160px; height: 160px;
+  bottom: -5px; right: -5px;
+}
+
+/* ─ Ornamental SVG sprigs — richer pine with cones ─ */
+/* Dark section corners */
+.sec-dark::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%23E0C8B0' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.22'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M106,43 Q96,24 118,20'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cpath d='M70,81 Q87,62 67,55'/%3E%3Cpath d='M86,66 Q104,47 84,41'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.5'/%3E%3Cellipse cx='95' cy='45' rx='2.5' ry='3.5' stroke-width='0.5' opacity='0.4'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%23E0C8B0' opacity='0.35'/%3E%3Ccircle cx='95' cy='45' r='1' fill='%23E0C8B0' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+}
+.sec-dark::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%23E0C8B0' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.22'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cpath d='M70,81 Q87,62 67,55'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.5'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%23E0C8B0' opacity='0.35'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Light section corners — burgundy */
+.sec-light::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%236B2D3A' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.18'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M106,43 Q96,24 118,20'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cpath d='M70,81 Q87,62 67,55'/%3E%3Cpath d='M86,66 Q104,47 84,41'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.45'/%3E%3Cellipse cx='95' cy='45' rx='2.5' ry='3.5' stroke-width='0.5' opacity='0.35'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%236B2D3A' opacity='0.3'/%3E%3Ccircle cx='95' cy='45' r='1' fill='%236B2D3A' opacity='0.25'/%3E%3C/g%3E%3C/svg%3E");
+}
+.sec-light::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%236B2D3A' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.18'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.45'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%236B2D3A' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ─ sec-rule gets inline ornamental flourish ─ */
+.sec-rule { position: relative; }
+
+/* ─ Mini-card decorative pin-stripe top border ─ */
+.mini-card-dark {
+  border-top: 1px solid rgba(220,180,160,0.2);
+}
+.mini-card-light {
+  border-top: 1px solid rgba(107,45,58,0.12);
+}
+
+/* ─ Ornamental divider between ww-day cards ─ */
+.ww-day-sep {
+  display: flex; align-items: center; gap: 8px;
+  padding: 0 0.5rem;
+}
+.ww-day-sep::before, .ww-day-sep::after {
+  content: ''; flex: 1; height: 0.5px;
+}
+.sec-light .ww-day-sep::before, .sec-light .ww-day-sep::after { background: rgba(107,45,58,0.1); }
+.sec-dark  .ww-day-sep::before, .sec-dark  .ww-day-sep::after { background: rgba(255,255,255,0.08); }
+.ww-day-sep-icon { font-size: 8px; opacity: 0.4; }
+
+/* ─ Floating botanical watermark in center of big sections ─ */
+.sec-watermark {
+  position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+  pointer-events: none; z-index: 0; opacity: 0.04;
+  width: 280px; height: 280px;
+}
+
+/* ─ Hero decorative band at bottom ─ */
+.hero-bottom-rule {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px; pointer-events: none;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(220,180,160,0.15) 20%,
+    rgba(220,180,160,0.35) 50%,
+    rgba(220,180,160,0.15) 80%,
+    transparent 100%);
+}
+
+/* ─ Section title decorative accent left ─ */
+.sec-title::before {
+  content: '';
+  display: inline-block;
+  width: 3px; height: 0.9em;
+  background: currentColor;
+  opacity: 0.15;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 2px;
+  transform: translateY(-1px);
+}
+
+/* ─ Footer enhanced ─ */
+.footer-orn-line { width: 70px; }
+
+/* ─ Dots row ornament ─ */
+.orn-dots {
+  display: flex; align-items: center; gap: 6px;
+  justify-content: center; margin: 1.25rem 0;
+}
+.orn-dots span {
+  width: 3px; height: 3px; border-radius: 50%;
+  background: rgba(220,180,160,0.4);
+}
+.orn-dots span:nth-child(2) { width: 5px; height: 5px; }
+.orn-dots-light span { background: rgba(107,45,58,0.25); }
+.orn-dots-light span:nth-child(2) { background: rgba(107,45,58,0.4); }
+
+@media (max-width:600px) {
+  .sec-dark::before, .sec-dark::after,
+  .sec-light::before, .sec-light::after {
+    width: 100px; height: 100px; opacity: 0.9;
+  }
+  .sec-watermark { width: 180px; height: 180px; }
+}
+
+/* ══════════════════════════════════
+   RICH BOTANICAL & ORNAMENTAL DECOR
+══════════════════════════════════ */
+
+/* ─ Hero: additional watermark ornament ─ */
+.hero-top::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 200px; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(220,180,160,0.25), transparent);
+}
+
+/* ─ Full-width thin decorative rules between sections ─ */
+.sec-dark::before, .sec-light::before {
+  width: 160px; height: 160px;
+  top: -5px; left: -5px;
+}
+.sec-dark::after, .sec-light::after {
+  width: 160px; height: 160px;
+  bottom: -5px; right: -5px;
+}
+
+/* ─ Ornamental SVG sprigs — richer pine with cones ─ */
+/* Dark section corners */
+.sec-dark::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%23E0C8B0' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.22'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M106,43 Q96,24 118,20'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cpath d='M70,81 Q87,62 67,55'/%3E%3Cpath d='M86,66 Q104,47 84,41'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.5'/%3E%3Cellipse cx='95' cy='45' rx='2.5' ry='3.5' stroke-width='0.5' opacity='0.4'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%23E0C8B0' opacity='0.35'/%3E%3Ccircle cx='95' cy='45' r='1' fill='%23E0C8B0' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+}
+.sec-dark::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%23E0C8B0' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.22'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cpath d='M70,81 Q87,62 67,55'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.5'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%23E0C8B0' opacity='0.35'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Light section corners — burgundy */
+.sec-light::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%236B2D3A' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.18'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M106,43 Q96,24 118,20'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cpath d='M70,81 Q87,62 67,55'/%3E%3Cpath d='M86,66 Q104,47 84,41'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.45'/%3E%3Cellipse cx='95' cy='45' rx='2.5' ry='3.5' stroke-width='0.5' opacity='0.35'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%236B2D3A' opacity='0.3'/%3E%3Ccircle cx='95' cy='45' r='1' fill='%236B2D3A' opacity='0.25'/%3E%3C/g%3E%3C/svg%3E");
+}
+.sec-light::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cg stroke='%236B2D3A' stroke-width='0.7' fill='none' stroke-linecap='round' opacity='0.18'%3E%3Cpath d='M6,154 Q35,112 65,72 Q95,32 152,6'/%3E%3Cpath d='M14,144 Q9,128 24,120'/%3E%3Cpath d='M22,132 Q16,115 32,107'/%3E%3Cpath d='M32,118 Q25,100 43,93'/%3E%3Cpath d='M44,103 Q36,84 55,77'/%3E%3Cpath d='M57,88 Q48,69 68,62'/%3E%3Cpath d='M72,73 Q62,54 83,48'/%3E%3Cpath d='M88,58 Q78,39 100,34'/%3E%3Cpath d='M20,140 Q32,124 16,114'/%3E%3Cpath d='M30,126 Q44,108 26,100'/%3E%3Cpath d='M42,111 Q57,93 38,85'/%3E%3Cpath d='M56,96 Q72,78 52,70'/%3E%3Cellipse cx='65' cy='72' rx='3' ry='4' stroke-width='0.6' opacity='0.45'/%3E%3Ccircle cx='65' cy='72' r='1.2' fill='%236B2D3A' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ─ sec-rule gets inline ornamental flourish ─ */
+.sec-rule { position: relative; }
+
+/* ─ Mini-card decorative pin-stripe top border ─ */
+.mini-card-dark {
+  border-top: 1px solid rgba(220,180,160,0.2);
+}
+.mini-card-light {
+  border-top: 1px solid rgba(107,45,58,0.12);
+}
+
+/* ─ Ornamental divider between ww-day cards ─ */
+.ww-day-sep {
+  display: flex; align-items: center; gap: 8px;
+  padding: 0 0.5rem;
+}
+.ww-day-sep::before, .ww-day-sep::after {
+  content: ''; flex: 1; height: 0.5px;
+}
+.sec-light .ww-day-sep::before, .sec-light .ww-day-sep::after { background: rgba(107,45,58,0.1); }
+.sec-dark  .ww-day-sep::before, .sec-dark  .ww-day-sep::after { background: rgba(255,255,255,0.08); }
+.ww-day-sep-icon { font-size: 8px; opacity: 0.4; }
+
+/* ─ Floating botanical watermark in center of big sections ─ */
+.sec-watermark {
+  position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+  pointer-events: none; z-index: 0; opacity: 0.04;
+  width: 280px; height: 280px;
+}
+
+/* ─ Hero decorative band at bottom ─ */
+.hero-bottom-rule {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px; pointer-events: none;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(220,180,160,0.15) 20%,
+    rgba(220,180,160,0.35) 50%,
+    rgba(220,180,160,0.15) 80%,
+    transparent 100%);
+}
+
+/* ─ Section title decorative accent left ─ */
+.sec-title::before {
+  content: '';
+  display: inline-block;
+  width: 3px; height: 0.9em;
+  background: currentColor;
+  opacity: 0.15;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 2px;
+  transform: translateY(-1px);
+}
+
+/* ─ Footer enhanced ─ */
+.footer-orn-line { width: 70px; }
+
+/* ─ Dots row ornament ─ */
+.orn-dots {
+  display: flex; align-items: center; gap: 6px;
+  justify-content: center; margin: 1.25rem 0;
+}
+.orn-dots span {
+  width: 3px; height: 3px; border-radius: 50%;
+  background: rgba(220,180,160,0.4);
+}
+.orn-dots span:nth-child(2) { width: 5px; height: 5px; }
+.orn-dots-light span { background: rgba(107,45,58,0.25); }
+.orn-dots-light span:nth-child(2) { background: rgba(107,45,58,0.4); }
+
+@media (max-width:600px) {
+  .sec-dark::before, .sec-dark::after,
+  .sec-light::before, .sec-light::after {
+    width: 100px; height: 100px; opacity: 0.9;
+  }
+  .sec-watermark { width: 180px; height: 180px; }
+}
+
+/* ══════════════════════════════════
+   SPLASH SCREEN
+══════════════════════════════════ */
+body { overflow: hidden; }
+body.splash-done { overflow-x: hidden; overflow-y: auto; }
+
+
+.splash.hiding {
+  opacity: 0; transform: scale(1.04);
+  pointer-events: none;
+}
+.splash.hidden { display: none; }
+
+/* Same botanical corners as hero */
+.splash-corner {
+  position: absolute; width: 180px; height: 180px; pointer-events: none;
+}
+.splash-corner.tl { top: 0; left: 0; }
+.splash-corner.tr { top: 0; right: 0; transform: scaleX(-1); }
+.splash-corner.bl { bottom: 0; left: 0; transform: scaleY(-1); opacity: .5; }
+.splash-corner.br { bottom: 0; right: 0; transform: scale(-1); opacity: .5; }
+
+/* Top / bottom thin gold rules */
+.splash-rule-t {
+  position: absolute; top: 18px; left: 8%; right: 8%;
+  height: 0.5px;
+  background: linear-gradient(90deg, transparent, rgba(220,180,160,0.25), transparent);
+}
+.splash-rule-b {
+  position: absolute; bottom: 18px; left: 8%; right: 8%;
+  height: 0.5px;
+  background: linear-gradient(90deg, transparent, rgba(220,180,160,0.25), transparent);
+}
+
+.splash-pine { margin-bottom: 1.75rem; opacity: 0.85; }
+
+.splash-eyebrow {
+  font-family: var(--font-b); font-size: 9px; font-weight: 300;
+  letter-spacing: 0.38em; text-transform: uppercase;
+  color: rgba(220,180,160,0.5); margin-bottom: 1.75rem;
+}
+
+.splash-names-wrap {
+  position: relative; padding: 1.25rem 2.5rem; margin-bottom: 0.5rem;
+}
+.splash-names-wrap::before {
+  content: ''; position: absolute; top: 0; left: 0;
+  width: 18px; height: 18px;
+  border-top: 0.5px solid rgba(220,180,160,0.35);
+  border-left: 0.5px solid rgba(220,180,160,0.35);
+}
+.splash-names-wrap::after {
+  content: ''; position: absolute; bottom: 0; right: 0;
+  width: 18px; height: 18px;
+  border-bottom: 0.5px solid rgba(220,180,160,0.35);
+  border-right: 0.5px solid rgba(220,180,160,0.35);
+}
+
+.splash-names {
+  font-family: var(--font-d);
+  font-size: clamp(2.2rem, 10vw, 4.2rem);
+  font-weight: 300; line-height: 1.1;
+  color: rgba(255,255,255,0.95);
+  letter-spacing: 0.14em; text-transform: uppercase;
+}
+.splash-amp {
+  font-family: var(--font-d); font-style: italic;
+  font-size: 0.5em; color: rgba(220,180,160,0.85);
+  display: block; letter-spacing: 0.12em;
+  margin: 0.3rem 0; text-transform: none; font-weight: 300;
+}
+
+.splash-orn {
+  display: flex; align-items: center; gap: 10px;
+  justify-content: center; margin: 1rem 0 1.5rem;
+}
+.splash-orn-line  { width: 45px; height: 0.5px; background: rgba(220,180,160,0.28); }
+.splash-orn-diamond {
+  width: 5px; height: 5px;
+  border: 0.5px solid rgba(220,180,160,0.4); transform: rotate(45deg);
+}
+.splash-orn-dot { width: 3px; height: 3px; background: rgba(220,180,160,0.28); border-radius: 50%; }
+
+.splash-invite {
+  font-family: var(--font-d); font-size: 14px;
+  font-style: italic; font-weight: 300;
+  color: rgba(255,255,255,0.5); line-height: 1.9;
+  margin-bottom: 1.25rem;
+}
+
+.splash-date {
+  font-family: var(--font-b); font-size: 9px; font-weight: 300;
+  letter-spacing: 0.28em; text-transform: uppercase;
+  color: rgba(255,255,255,0.35); margin-bottom: 2.5rem;
+}
+
+/* Open button */
+.splash-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  border: 0.5px solid rgba(220,180,160,0.4);
+  border-radius: 50px;
+  font-family: var(--font-b); font-size: 11px; font-weight: 400;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: rgba(220,180,160,0.8);
+  cursor: pointer;
+  transition: all 0.35s ease;
+  animation: splashBtnPulse 3s ease infinite;
+}
+.splash-btn:hover {
+  background: rgba(220,180,160,0.1);
+  border-color: rgba(220,180,160,0.7);
+  color: rgba(220,180,160,1);
+  transform: scale(1.04);
+}
+.splash-btn svg { width: 14px; height: 14px; opacity: 0.7; }
+
+@keyframes splashBtnPulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(220,180,160,0); }
+  50%      { box-shadow: 0 0 0 8px rgba(220,180,160,0.08); }
+}
+
+/* ── Entrance animation ── */
+.splash-pine,
+.splash-eyebrow,
+.splash-names-wrap,
+.splash-orn,
+.splash-invite,
+.splash-date,
+.splash-btn {
+  animation: splashFadeUp 1s ease both;
+}
+.splash-pine     { animation-delay: 0.1s; }
+.splash-eyebrow  { animation-delay: 0.25s; }
+.splash-names-wrap { animation-delay: 0.4s; }
+.splash-orn      { animation-delay: 0.55s; }
+.splash-invite   { animation-delay: 0.65s; }
+.splash-date     { animation-delay: 0.75s; }
+.splash-btn      { animation-delay: 0.95s; }
+
+@keyframes splashFadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ SPLASH SCREEN ══ -->
+<div class="splash" id="splash">
+
+  <!-- 4-corner botanical decoration -->
+  <svg class="splash-corner-svg tl" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><g stroke="#6B2D3A" stroke-width="0.75" fill="none" stroke-linecap="round">
+      <path d="M5,195 Q35,145 70,100 Q105,55 190,8"/>
+      <path d="M12,185 Q5,165 22,153"/><path d="M22,172 Q13,153 32,140"/>
+      <path d="M33,158 Q22,138 44,126"/><path d="M46,143 Q33,124 56,112"/>
+      <path d="M60,127 Q46,108 70,97"/><path d="M76,111 Q62,93 87,83"/>
+      <path d="M94,95 Q80,77 105,68"/><path d="M114,78 Q101,61 126,53"/>
+      <path d="M16,188 Q28,168 10,156"/><path d="M28,174 Q42,155 24,143"/>
+      <path d="M42,160 Q57,141 39,130"/><path d="M58,144 Q74,126 56,115"/>
+      <path d="M75,128 Q92,110 73,100"/>
+      <ellipse cx="70" cy="100" rx="4" ry="5.5" stroke-width="0.6"/>
+      <ellipse cx="105" cy="68" rx="3.5" ry="4.5" stroke-width="0.5"/>
+      <circle cx="70" cy="100" r="1.5" fill="#6B2D3A"/>
+      <circle cx="105" cy="68" r="1.2" fill="#6B2D3A"/>
+      <circle cx="140" cy="42" r="1" fill="#6B2D3A"/>
+    </g></svg>
+  <svg class="splash-corner-svg tr" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><g stroke="#6B2D3A" stroke-width="0.75" fill="none" stroke-linecap="round">
+      <path d="M5,195 Q35,145 70,100 Q105,55 190,8"/>
+      <path d="M12,185 Q5,165 22,153"/><path d="M22,172 Q13,153 32,140"/>
+      <path d="M33,158 Q22,138 44,126"/><path d="M46,143 Q33,124 56,112"/>
+      <path d="M60,127 Q46,108 70,97"/><path d="M76,111 Q62,93 87,83"/>
+      <path d="M94,95 Q80,77 105,68"/><path d="M114,78 Q101,61 126,53"/>
+      <path d="M16,188 Q28,168 10,156"/><path d="M28,174 Q42,155 24,143"/>
+      <path d="M42,160 Q57,141 39,130"/><path d="M58,144 Q74,126 56,115"/>
+      <path d="M75,128 Q92,110 73,100"/>
+      <ellipse cx="70" cy="100" rx="4" ry="5.5" stroke-width="0.6"/>
+      <ellipse cx="105" cy="68" rx="3.5" ry="4.5" stroke-width="0.5"/>
+      <circle cx="70" cy="100" r="1.5" fill="#6B2D3A"/>
+      <circle cx="105" cy="68" r="1.2" fill="#6B2D3A"/>
+      <circle cx="140" cy="42" r="1" fill="#6B2D3A"/>
+    </g></svg>
+  <svg class="splash-corner-svg bl" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><g stroke="#6B2D3A" stroke-width="0.75" fill="none" stroke-linecap="round">
+      <path d="M5,195 Q35,145 70,100 Q105,55 190,8"/>
+      <path d="M12,185 Q5,165 22,153"/><path d="M22,172 Q13,153 32,140"/>
+      <path d="M33,158 Q22,138 44,126"/><path d="M46,143 Q33,124 56,112"/>
+      <path d="M60,127 Q46,108 70,97"/><path d="M76,111 Q62,93 87,83"/>
+      <path d="M94,95 Q80,77 105,68"/><path d="M114,78 Q101,61 126,53"/>
+      <path d="M16,188 Q28,168 10,156"/><path d="M28,174 Q42,155 24,143"/>
+      <path d="M42,160 Q57,141 39,130"/><path d="M58,144 Q74,126 56,115"/>
+      <path d="M75,128 Q92,110 73,100"/>
+      <ellipse cx="70" cy="100" rx="4" ry="5.5" stroke-width="0.6"/>
+      <ellipse cx="105" cy="68" rx="3.5" ry="4.5" stroke-width="0.5"/>
+      <circle cx="70" cy="100" r="1.5" fill="#6B2D3A"/>
+      <circle cx="105" cy="68" r="1.2" fill="#6B2D3A"/>
+      <circle cx="140" cy="42" r="1" fill="#6B2D3A"/>
+    </g></svg>
+  <svg class="splash-corner-svg br" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><g stroke="#6B2D3A" stroke-width="0.75" fill="none" stroke-linecap="round">
+      <path d="M5,195 Q35,145 70,100 Q105,55 190,8"/>
+      <path d="M12,185 Q5,165 22,153"/><path d="M22,172 Q13,153 32,140"/>
+      <path d="M33,158 Q22,138 44,126"/><path d="M46,143 Q33,124 56,112"/>
+      <path d="M60,127 Q46,108 70,97"/><path d="M76,111 Q62,93 87,83"/>
+      <path d="M94,95 Q80,77 105,68"/><path d="M114,78 Q101,61 126,53"/>
+      <path d="M16,188 Q28,168 10,156"/><path d="M28,174 Q42,155 24,143"/>
+      <path d="M42,160 Q57,141 39,130"/><path d="M58,144 Q74,126 56,115"/>
+      <path d="M75,128 Q92,110 73,100"/>
+      <ellipse cx="70" cy="100" rx="4" ry="5.5" stroke-width="0.6"/>
+      <ellipse cx="105" cy="68" rx="3.5" ry="4.5" stroke-width="0.5"/>
+      <circle cx="70" cy="100" r="1.5" fill="#6B2D3A"/>
+      <circle cx="105" cy="68" r="1.2" fill="#6B2D3A"/>
+      <circle cx="140" cy="42" r="1" fill="#6B2D3A"/>
+    </g></svg>
+
+  <!-- Pine icon -->
+  <div class="splash-pine-top">
+    <svg width="56" height="38" viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="rgba(61,26,34,0.55)" stroke-width="0.9" fill="none" stroke-linecap="round">
+        <path d="M40,48 Q40,30 40,8"/>
+        <path d="M40,18 Q29,14 19,18"/><path d="M40,18 Q51,14 61,18"/>
+        <path d="M40,26 Q25,21 13,26"/><path d="M40,26 Q55,21 67,26"/>
+        <path d="M40,34 Q23,28 9,34"/><path d="M40,34 Q57,28 71,34"/>
+        <path d="M40,42 Q21,36 5,42"/><path d="M40,42 Q59,36 75,42"/>
+        <ellipse cx="40" cy="6" rx="3.5" ry="4.5" stroke-width="0.75"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- Above text -->
+  <div class="splash-above">
+    <p class="splash-script">Wedding day</p>
+    <p class="splash-title">Вам приглашение</p>
+    <div class="splash-title-rule">
+      <div class="splash-title-rule-line"></div>
+      <div class="splash-title-rule-dot"></div>
+      <div class="splash-title-rule-diamond"></div>
+      <div class="splash-title-rule-dot"></div>
+      <div class="splash-title-rule-line"></div>
+    </div>
+  </div>
+
+  <!-- ENVELOPE -->
+  <div class="envelope-wrap" id="envelopeWrap">
+    <div class="env-body"></div>
+    <div class="env-back-top"></div>
+    <div class="env-back-bottom"></div>
+    <div class="env-flap-left"></div>
+    <div class="env-flap-right"></div>
+    <div class="env-inner"></div>
+    <div class="env-flap-top" id="envFlapTop">
+      <div class="env-flap-top-face"></div>
+    </div>
+    <div class="env-outline"></div>
+    <div class="env-fold-line-v"></div>
+    <div class="env-fold-line-h"></div>
+
+    <!-- Wax seal -->
+    <svg class="wax-seal" id="waxSeal" viewBox="0 0 84 84" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="wg" cx="38%" cy="34%" r="62%">
+          <stop offset="0%"   stop-color="#9B4458"/>
+          <stop offset="40%"  stop-color="#7A2D3E"/>
+          <stop offset="75%"  stop-color="#5C1F2C"/>
+          <stop offset="100%" stop-color="#3D1522"/>
+        </radialGradient>
+        <radialGradient id="wgShine" cx="35%" cy="28%" r="42%">
+          <stop offset="0%"   stop-color="rgba(255,255,255,0.28)"/>
+          <stop offset="60%"  stop-color="rgba(255,255,255,0.06)"/>
+          <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+        </radialGradient>
+        <radialGradient id="wgDeep" cx="60%" cy="65%" r="50%">
+          <stop offset="0%"   stop-color="rgba(0,0,0,0.25)"/>
+          <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+        </radialGradient>
+      </defs>
+      <!-- Organic irregular wax shape -->
+      <path d="M42,3 Q50,2 57,6 Q65,10 69,18 Q74,26 74,35 Q75,44 71,52 Q66,60 58,65 Q50,70 41,71 Q32,72 24,68 Q16,63 11,55 Q5,47 4,38 Q3,29 7,21 Q11,13 19,8 Q27,3 35,2 Q38,2 42,3Z" fill="url(#wg)"/>
+      <path d="M42,3 Q50,2 57,6 Q65,10 69,18 Q74,26 74,35 Q75,44 71,52 Q66,60 58,65 Q50,70 41,71 Q32,72 24,68 Q16,63 11,55 Q5,47 4,38 Q3,29 7,21 Q11,13 19,8 Q27,3 35,2 Q38,2 42,3Z" fill="url(#wgShine)"/>
+      <path d="M42,3 Q50,2 57,6 Q65,10 69,18 Q74,26 74,35 Q75,44 71,52 Q66,60 58,65 Q50,70 41,71 Q32,72 24,68 Q16,63 11,55 Q5,47 4,38 Q3,29 7,21 Q11,13 19,8 Q27,3 35,2 Q38,2 42,3Z" fill="url(#wgDeep)"/>
+      <!-- Outer decorative ring -->
+      <circle cx="42" cy="37" r="27" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="0.7"/>
+      <!-- Dotted inner ring -->
+      <circle cx="42" cy="37" r="21" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="0.5" stroke-dasharray="2 3"/>
+      <!-- Inner solid ring -->
+      <circle cx="42" cy="37" r="18" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
+      <!-- Laurel left -->
+      <g stroke="rgba(255,255,255,0.6)" stroke-width="0.7" fill="none" stroke-linecap="round">
+        <path d="M22,37 Q23,32 27,31"/><path d="M22,37 Q23,42 27,43"/>
+        <path d="M24,33 Q28,28 32,29"/><path d="M24,41 Q28,46 32,45"/>
+        <path d="M28,29 Q32,25 35,27"/><path d="M28,45 Q32,49 35,47"/>
+        <path d="M22,37 L33,37" stroke-width="0.45" stroke-dasharray="1.5 2"/>
+      </g>
+      <!-- Laurel right -->
+      <g stroke="rgba(255,255,255,0.6)" stroke-width="0.7" fill="none" stroke-linecap="round">
+        <path d="M62,37 Q61,32 57,31"/><path d="M62,37 Q61,42 57,43"/>
+        <path d="M60,33 Q56,28 52,29"/><path d="M60,41 Q56,46 52,45"/>
+        <path d="M56,29 Q52,25 49,27"/><path d="M56,45 Q52,49 49,47"/>
+        <path d="M62,37 L51,37" stroke-width="0.45" stroke-dasharray="1.5 2"/>
+      </g>
+      <!-- Monogram Д & Д -->
+      <text x="42" y="33" text-anchor="middle"
+            font-family="Cormorant Garamond,Georgia,serif"
+            font-size="11" font-weight="300" font-style="italic"
+            fill="rgba(255,255,255,0.92)">Д</text>
+      <text x="42" y="41" text-anchor="middle"
+            font-family="Cormorant Garamond,Georgia,serif"
+            font-size="8" font-weight="300"
+            fill="rgba(255,255,255,0.55)">&amp;</text>
+      <text x="42" y="50" text-anchor="middle"
+            font-family="Cormorant Garamond,Georgia,serif"
+            font-size="11" font-weight="300" font-style="italic"
+            fill="rgba(255,255,255,0.92)">Д</text>
+      <!-- Top ornament -->
+      <path d="M34,21 Q42,18 50,21" stroke="rgba(255,255,255,0.35)" stroke-width="0.7" fill="none"/>
+      <circle cx="42" cy="19" r="1.5" fill="rgba(255,255,255,0.4)"/>
+      <circle cx="36" cy="22" r="0.8" fill="rgba(255,255,255,0.25)"/>
+      <circle cx="48" cy="22" r="0.8" fill="rgba(255,255,255,0.25)"/>
+    </svg>
+  </div><!-- /envelope-wrap -->
+
+  <!-- Below hint -->
+  <div class="splash-below">
+    <p class="splash-hint">нажмите на печать,<br>чтобы открыть</p>
+    <div class="splash-hint-arrow"></div>
+  </div>
+
+</div>
+<!-- ══ END SPLASH ══ -->
+
+
+
+
+
+<!-- ══ 1. HERO ══ -->
+<section class="hero">
+
+  <!-- Botanical corner SVGs — line-art -->
+  <svg style="position:absolute;top:0;left:0;width:160px;height:160px;pointer-events:none;z-index:1;" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#D0A88E" stroke-width="0.7" fill="none" stroke-linecap="round" opacity="0.28">
+      <path d="M5,195 Q35,145 70,100 Q105,55 190,8"/>
+      <path d="M12,185 Q5,165 22,153"/><path d="M22,172 Q13,153 32,140"/>
+      <path d="M33,158 Q22,138 44,126"/><path d="M46,143 Q33,124 56,112"/>
+      <path d="M60,127 Q46,108 70,97"/><path d="M76,111 Q62,93 87,83"/>
+      <path d="M94,95 Q80,77 105,68"/><path d="M114,78 Q101,61 126,53"/>
+      <path d="M16,188 Q28,168 10,156"/><path d="M28,174 Q42,155 24,143"/>
+      <path d="M42,160 Q57,141 39,130"/><path d="M58,144 Q74,126 56,115"/>
+      <circle cx="70" cy="100" r="1.5" fill="#D0A88E" opacity=".5"/>
+      <circle cx="105" cy="68" r="1.2" fill="#D0A88E" opacity=".4"/>
+      <circle cx="140" cy="42" r="1" fill="#D0A88E" opacity=".35"/>
+    </g>
+  </svg>
+  <svg style="position:absolute;top:0;right:0;width:160px;height:160px;pointer-events:none;z-index:1;transform:scaleX(-1);" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#D0A88E" stroke-width="0.7" fill="none" stroke-linecap="round" opacity="0.28">
+      <path d="M5,195 Q35,145 70,100 Q105,55 190,8"/>
+      <path d="M12,185 Q5,165 22,153"/><path d="M22,172 Q13,153 32,140"/>
+      <path d="M33,158 Q22,138 44,126"/><path d="M46,143 Q33,124 56,112"/>
+      <path d="M60,127 Q46,108 70,97"/><path d="M76,111 Q62,93 87,83"/>
+      <path d="M16,188 Q28,168 10,156"/><path d="M28,174 Q42,155 24,143"/>
+      <path d="M42,160 Q57,141 39,130"/>
+      <circle cx="70" cy="100" r="1.5" fill="#D0A88E" opacity=".5"/>
+    </g>
+  </svg>
+
+  <!-- Thin decorative horizontal rules -->
+  <div style="position:absolute;top:18px;left:8%;right:8%;height:0.5px;background:linear-gradient(90deg,transparent,rgba(220,180,160,0.2),transparent);z-index:1;pointer-events:none;"></div>
+
+  <div class="hero-top">
+
+    <!-- Pine branch icon -->
+    <div class="hero-pine-icon">
+      <svg width="64" height="44" viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="rgba(220,180,160,0.7)" stroke-width="0.85" fill="none" stroke-linecap="round">
+          <path d="M40,48 Q40,30 40,8"/>
+          <path d="M40,18 Q29,14 19,18"/><path d="M40,18 Q51,14 61,18"/>
+          <path d="M40,26 Q25,21 13,26"/><path d="M40,26 Q55,21 67,26"/>
+          <path d="M40,34 Q23,28 9,34"/><path d="M40,34 Q57,28 71,34"/>
+          <path d="M40,42 Q21,36 5,42"/><path d="M40,42 Q59,36 75,42"/>
+          <ellipse cx="40" cy="6" rx="3.5" ry="4.5" stroke-width="0.75"/>
+          <path d="M37,4 Q40,2.5 43,4"/>
+          <path d="M36.5,7 Q40,5.5 43.5,7"/>
+        </g>
+      </svg>
+    </div>
+
+    <p class="hero-eyebrow">29 — 31 мая 2026</p>
+
+    <!-- Names with corner frame -->
+    <div class="hero-names-wrap">
+      <h1 class="hero-names">
+        Даниил<span class="hero-amp">и</span>Дарья
+      </h1>
+    </div>
+
+    <!-- Ornamental divider -->
+    <div class="hero-orn">
+      <div class="hero-orn-line"></div>
+      <div class="hero-orn-dot"></div>
+      <div class="hero-orn-diamond"></div>
+      <div class="hero-orn-dot"></div>
+      <div class="hero-orn-line"></div>
+    </div>
+
+    <p class="hero-invite">
+      рады пригласить вас разделить<br>этот особенный день с нами
+    </p>
+
+    <div class="orn-dots" style="margin:1rem 0 1.25rem;"><span></span><span></span><span></span></div>
+    <!-- Address — two lines -->
+    <div class="hero-addr">
+      <span class="hero-addr-line">Жайлау 25</span>
+      <span class="hero-addr-line">Сарыбулак · Боровое</span>
+    </div>
+
+    <!-- Countdown — inside white hero block -->
+    <div class="hero-divline-light"></div>
+    <div class="countdown" id="countdown">
+      <div class="cd-item"><span class="cd-num" id="cd-d">--</span><span class="cd-label">дней</span></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-item"><span class="cd-num" id="cd-h">--</span><span class="cd-label">часов</span></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-item"><span class="cd-num" id="cd-m">--</span><span class="cd-label">минут</span></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-item"><span class="cd-num" id="cd-s">--</span><span class="cd-label">секунд</span></div>
+    </div>
+
+  </div><!-- /hero-top -->
+
+  <div class="hero-bottom-rule"></div>
+  <audio id="bgAudio" loop preload="auto" src="audio.mp3"></audio>
+</section>
+
+<!-- ══ 2. WEDDING WEEKEND (light) ══ -->
+<section class="sec-light">
+  <div class="inner" style="position:relative;">
+    <!-- Section watermark -->
+    <svg class="sec-watermark" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="currentColor" stroke-width="0.8" fill="none" stroke-linecap="round">
+        <path d="M140,270 Q140,180 140,20"/>
+        <path d="M140,50 Q105,40 75,50"/><path d="M140,50 Q175,40 205,50"/>
+        <path d="M140,70 Q98,58 65,70"/><path d="M140,70 Q182,58 215,70"/>
+        <path d="M140,92 Q90,78 52,92"/><path d="M140,92 Q190,78 228,92"/>
+        <path d="M140,116 Q82,100 38,116"/><path d="M140,116 Q198,100 242,116"/>
+        <path d="M140,142 Q74,124 24,142"/><path d="M140,142 Q206,124 256,142"/>
+        <path d="M140,170 Q66,150 12,170"/><path d="M140,170 Q214,150 268,170"/>
+        <path d="M140,200 Q58,178 0,200"/><path d="M140,200 Q222,178 280,200"/>
+        <path d="M140,232 Q50,208 0,232"/><path d="M140,232 Q230,208 280,232"/>
+        <ellipse cx="140" cy="18" rx="8" ry="11" stroke-width="0.7"/>
+        <path d="M132,14 Q140,10 148,14"/>
+        <path d="M131,18 Q140,14 149,18"/>
+        <path d="M130,22 Q140,18 150,22"/>
+      </g>
+    </svg>
+
+    <div class="reveal">
+      <h2 class="sec-title">Wedding <em>Weekend</em></h2>
+      <div class="sec-rule"><div class="sec-rule-d"></div></div>
+    </div>
+    <div class="ww-days">
+      <div class="mini-card-light reveal">
+        <div class="ww-day-header"><span class="ww-day-date">29 мая</span><span class="ww-day-name">Friday</span></div>
+        <div class="ww-items">
+          <div class="ww-item"><div class="ww-dot"></div><span class="ww-item-name">Check In</span><span class="ww-item-sub">from 14:00</span></div>
+          <div class="ww-item"><div class="ww-dot"></div><span class="ww-item-name">Organization</span><span class="ww-item-sub">details &amp; briefing</span></div>
+          <div class="ww-item"><div class="ww-dot"></div><span class="ww-item-name">Grill Party</span><span class="ww-item-sub">evening</span></div>
+        </div>
+      </div>
+      <div class="ww-day-sep"><span class="ww-day-sep-icon">✦</span></div>
+      <div class="mini-card-light reveal">
+        <div class="ww-day-header"><span class="ww-day-date">30 мая</span><span class="ww-day-name">Saturday</span></div>
+        <div class="ww-items">
+          <div class="ww-item"><div class="ww-dot"></div><span class="ww-item-name">Breakfast</span><span class="ww-item-sub">morning</span></div>
+          <div class="ww-item"><div class="ww-dot"></div><span class="ww-item-name">Activity</span><span class="ww-item-sub">daytime</span></div>
+          <div class="ww-item"><div class="ww-dot"></div><span class="ww-item-name">Spa &amp; Chill Time</span><span class="ww-item-sub">afternoon</span></div>
+          <div class="ww-item"><div class="ww-dot"></div><span class="ww-item-name">Hookah Time</span><span class="ww-item-sub">late afternoon</span></div>
+          <div class="ww-item"><div class="ww-dot"></div><span class="ww-item-name">Grill Party</span><span class="ww-item-sub">evening</span></div>
+        </div>
+      </div>
+      <div class="ww-day-sep"><span class="ww-day-sep-icon">✦</span></div>
+      <div class="mini-card-light reveal">
+        <div class="ww-day-header"><span class="ww-day-date">31 мая</span><span class="ww-day-name">Sunday</span></div>
+        <div class="ww-items">
+          <div class="ww-item"><div class="ww-dot"></div><span class="ww-item-name">Breakfast</span><span class="ww-item-sub">morning</span></div>
+          <div class="ww-item"><div class="ww-dot"></div><span class="ww-item-name">Check Out</span><span class="ww-item-sub">until 12:00</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 3. LOCATION (dark) ══ -->
+<section class="sec-dark">
+  <div class="inner">
+    <div class="reveal">
+      <h2 class="sec-title"><em>Location</em></h2>
+      <div class="sec-rule"><div class="sec-rule-d"></div></div>
+      <p class="loc-body">База отдыха «Жайлау», Сарыбулак.<br>Сосновый лес, тишина и полная приватность — идеальное место для нашего weekend wedding.</p>
+    </div>
+
+    <div class="reveal">
+      <a href="https://2gis.kz/kokshetau/firm/70000001051483307" target="_blank" rel="noopener" class="map-wrap">
+        <div class="map-inner" style="position:relative;border-radius:var(--r-sm);overflow:hidden;height:auto;">
+          <img
+            src="data:image/jpeg;base64,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"
+            alt="Карта — Жайлау, Сарыбулак"
+            style="width:100%;height:auto;display:block;border-radius:var(--r-sm);"
+          />
+          <div class="map-pin-label"><span class="map-pin-dot"></span>Жайлау 25, Сарыбулак</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="loc-links reveal">
+      <a href="https://www.instagram.com/forest__and__lake/" target="_blank" rel="noopener" class="loc-link">
+        <div class="loc-link-icon icon-ig-bg">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5.5" stroke="#C13584" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="#C13584" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="#C13584"/></svg>
+        </div>
+        <span class="loc-link-label">Gallery of Location</span>
+        <span class="loc-link-sub">@forest__and__lake</span>
+      </a>
+      <a href="https://2gis.kz/kokshetau/directions/points/%7C70.348687%2C53.022682%3B70000001051483307?traffic" target="_blank" rel="noopener" class="loc-link">
+        <div class="loc-link-icon icon-nav-bg">
+          <!-- Route/navigation icon -->
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 11l19-9-9 19-2-8-8-2z" stroke="#319831" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="loc-link-label">Let's go!</span>
+        <span class="loc-link-sub">Маршрут · 2GIS</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 4. STYLE & ATMOSPHERE (light) ══ -->
+<section class="sec-light">
+  <div class="inner">
+    <div class="reveal">
+      <h2 class="sec-title">Style &amp; <em>Atmosphere</em></h2>
+      <div class="sec-rule"><div class="sec-rule-d"></div></div>
+    </div>
+
+    <div class="reveal">
+      <div class="mood-tags">
+        <span class="mood-tag">Forest Aesthetic</span>
+        <span class="mood-tag">Warm Lights</span>
+        <span class="mood-tag">Nature Vibes</span>
+        <span class="mood-tag">Cozy &amp; Warm</span>
+      </div>
+
+      <p style="font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(107,45,58,0.4);margin-bottom:.85rem;">Color Palette</p>
+      <div class="palette-circles">
+        <div class="pal-circle" style="background:#ffffff;border:1px solid rgba(255,255,255,0.2);"></div>
+        <div class="pal-circle" style="background:#360211;"></div>
+        <div class="pal-circle" style="background:#c4c4c4;"></div>
+        <div class="pal-circle" style="background:#666565;"></div>
+      </div>
+
+      <div class="outfits-block reveal">
+        Хотим провести этот weekend в тёплой атмосфере, с множеством шуток и лёгкого юмора.<br>
+        <strong>Весёлые outfits +87 к карме.</strong>
+      </div>
+    </div>
+
+    <div class="mini-card-light reveal" style="margin-top:1.5rem;">
+      <p class="gift-title">О подарках</p>
+      <p class="gift-body">Пожалуйста, не дарите нам вещи — нам правда некуда их класть.<br>Если хочется нас порадовать — подарите деньги: мы уже знаем, на что их потратим с удовольствием.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 5. CONNECTION & DRIVE (dark) ══ -->
+<section class="sec-dark">
+  <div class="inner">
+    <div class="mini-card-dark reveal">
+      <h2 class="sec-title" style="margin-bottom:.75rem;">Connection &amp; <em>Drive</em></h2>
+      <div class="sec-rule" style="margin-bottom:1.25rem;"><div class="sec-rule-d"></div></div>
+
+      <p class="conn-text">
+        Для нас праздник начинается заранее — присоединяйтесь к чату уже сейчас. Хочется видеть все этапы сборов, идеи и обсуждения в моменте.<br><br>
+        Делитесь всем, что попадается на глаза — смешные фото, «кружочки» во время дороги, красивые пейзажи и всё, что вызовет улыбку спустя время.
+      </p>
+
+      <div class="conn-links">
+        <a href="https://t.me/+Kq9xZkt-S_llYzc6" target="_blank" rel="noopener" class="conn-link">
+          <div class="conn-link-icon icon-tg">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8l-1.7 8.02c-.12.58-.46.72-.93.45l-2.57-1.9-1.24 1.19c-.14.14-.26.26-.53.26l.19-2.7 4.89-4.42c.21-.19-.05-.29-.33-.1L7.38 14.4l-2.52-.79c-.55-.17-.56-.55.12-.81l9.85-3.8c.46-.17.86.11.81.8z" fill="#29B6F6"/></svg>
+          </div>
+          <div><span class="conn-link-name">Telegram Chat</span><span class="conn-link-sub">Присоединяйтесь заранее.</span></div>
+        </a>
+      </div>
+
+      <p class="conn-note">После праздника вы сможете забрать все фото тут:</p>
+      <div class="conn-links">
+        <a href="https://drive.google.com/drive/folders/1t7xyIY9RA-c0rFaBGhfdycdzyX5VwN1Z?usp=sharing" target="_blank" rel="noopener" class="conn-link">
+          <div class="conn-link-icon icon-gdrive">
+            <!-- Google Drive icon — colorful triangle -->
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.5 20.5L8.5 13H20.5L16.5 20.5H4.5Z" fill="#0FA958"/>
+              <path d="M8.5 13L12.5 6L16.5 13H8.5Z" fill="#4285F4"/>
+              <path d="M3 18.5L7 11.5L12.5 6L8.5 13L4.5 20.5L3 18.5Z" fill="#FBBC04"/>
+            </svg>
+          </div>
+          <div><span class="conn-link-name">Google Drive</span><span class="conn-link-sub">Фото и видео с праздника.</span></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 6. QUESTIONNAIRE (light) ══ -->
+<section class="sec-light">
+  <div class="inner">
+    <div class="reveal">
+      <h2 class="sec-title"><em>Questionnaire</em></h2>
+      <div class="sec-rule"><div class="sec-rule-d"></div></div>
+      <p style="font-size:13.5px;color:#5A5652;margin-bottom:1.75rem;line-height:1.85;">Помогите нам подготовиться — это займёт одну минуту.</p>
+    </div>
+
+    <div class="mini-card-light reveal">
+      <div id="surveyForm">
+        <div class="q-step">
+          <p class="q-title">Your name</p>
+          <input class="name-field" type="text" id="guestName" placeholder="Как вас зовут?">
+        </div>
+        <div class="q-step">
+          <p class="q-title">Grill preference</p>
+          <p class="q-sub">Multiple choice</p>
+          <div class="opts" id="bbqGrid">
+            <div class="opt-chip" onclick="toggleChip(this)">Chicken</div>
+            <div class="opt-chip" onclick="toggleChip(this)">Pork</div>
+            <div class="opt-chip" onclick="toggleChip(this)">Duck</div>
+            <div class="opt-chip" onclick="toggleChip(this)">Lamb</div>
+            <div class="opt-chip" onclick="toggleChip(this)">Mushrooms</div>
+            <div class="opt-chip" onclick="toggleChip(this)">Vegetables</div>
+          </div>
+        </div>
+        <div class="q-step">
+          <p class="q-title">Time of stay</p>
+          <p class="q-sub">Mark all that apply</p>
+          <div class="check-grid" id="stayGrid">
+            <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="9" height="7" viewBox="0 0 9 7"><polyline points="1,3.5 3.5,6 8,1" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="check-item-label">May 29 (14:00–23:00)</span></div>
+            <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="9" height="7" viewBox="0 0 9 7"><polyline points="1,3.5 3.5,6 8,1" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="check-item-label">May 30 (09:00–14:00)</span></div>
+            <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="9" height="7" viewBox="0 0 9 7"><polyline points="1,3.5 3.5,6 8,1" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="check-item-label">May 30 (14:00–23:00)</span></div>
+            <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"><svg width="9" height="7" viewBox="0 0 9 7"><polyline points="1,3.5 3.5,6 8,1" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="check-item-label">May 31 (09:00–12:00)</span></div>
+          </div>
+        </div>
+        <div class="q-step">
+          <p class="q-title">Drinks</p>
+          <p class="q-sub">Multiple choice</p>
+          <div class="opts" id="alcGrid">
+            <div class="opt-chip" onclick="toggleChip(this)">Halal</div>
+            <div class="opt-chip" onclick="toggleChip(this)">Light Beer</div>
+            <div class="opt-chip" onclick="toggleChip(this)">Dark Beer</div>
+            <div class="opt-chip" onclick="toggleChip(this)">Strong Alcohol</div>
+            <div class="opt-chip" onclick="toggleChip(this)">Cocktails</div>
+            <div class="opt-chip" onclick="toggleChip(this)">Tinctures</div>
+            <div class="opt-chip" id="alcOther" onclick="toggleChipOther(this,'otherAlcWrap')">Other</div>
+          </div>
+          <div class="other-wrap" id="otherAlcWrap">
+            <input type="text" id="otherAlcText" placeholder="Specify...">
+          </div>
+        </div>
+        <button class="submit-btn" onclick="submitSurvey()" id="submitBtn">Send</button>
+        <div class="success-msg" id="successMsg">Thank you — your preferences are saved 🤍</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 7. TAKE IT (dark) ══ -->
+<section class="sec-dark">
+  <div class="inner">
+    <div class="reveal">
+      <h2 class="sec-title">Take it, <em>please</em></h2>
+      <div class="sec-rule"><div class="sec-rule-d"></div></div>
+    </div>
+
+    <div class="mini-card-dark reveal">
+      <div class="take-list">
+        <div class="take-item">
+          <p class="take-item-title">Spa <em>time</em></p>
+          <p class="take-item-body">
+            Запах хвойного леса + парная = идеальное сочетание для тёплой атмосферы.<br><br>
+            <strong>Base set:</strong> купальник, полотенце, шлёпки.<br>
+            <strong>Luxury max:</strong> масочки, скрабы, масла и баттеры.
+          </p>
+        </div>
+        <div class="take-divider"></div>
+        <div class="take-item">
+          <p class="take-item-title">Chill <em>time</em></p>
+          <p class="take-item-body">
+            Не забывайте — майский лес суров.<br><br>
+            <strong>Evening:</strong> закрытая тёплая одежда, обувь, аэрозоль от насекомых.<br>
+            <strong>Midday:</strong> шорты, майки, шлёпки, SPF.<br>
+            <strong>Optional:</strong> camping equipment / hobby supplies — если заскучаете.
+          </p>
+        </div>
+      </div>
+
+      <div class="take-ps">
+        <strong>P.S.</strong> Зарядные устройства, «сменка», косметичка — на всякий случай, don't forget!<br><br>
+        И, самое главное, <strong>ХОРОШЕЕ НАСТРОЕНИЕ!</strong><br><br>
+        <strong>P.P.S.:</strong> Улыбку, как и усы, можем наклеить.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+  <div class="footer-orn">
+    <div class="footer-orn-line"></div>
+    <div class="footer-orn-d"></div>
+    <div class="footer-orn-line"></div>
+  </div>
+  <p class="footer-date">29 — 31 мая 2026</p>
+  <div class="footer-divider"></div>
+  <p class="footer-addr">Жайлау 25 · Сарыбулак · Боровое</p>
+  <p class="footer-wait" style="margin-top:1.5rem;">Ждём вас!</p>
+  <p class="footer-love">с любовью,</p>
+</footer>
+
+<script>
+// SCROLL REVEAL
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.08 });
+revealEls.forEach(el => io.observe(el));
+
+// COUNTDOWN — 29 May 2026 14:00
+(function() {
+  var target = new Date('2026-05-29T14:00:00');
+  function update() {
+    var diff = target - new Date();
+    if (diff <= 0) {
+      document.getElementById('countdown').innerHTML =
+        '<span style="font-family:var(--font-d);font-size:1.5rem;color:#fff;font-style:italic;opacity:.7;">Уже сегодня 🤍</span>';
+      return;
+    }
+    var d = Math.floor(diff / 86400000);
+    var h = Math.floor((diff % 86400000) / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    var s = Math.floor((diff % 60000) / 1000);
+    function pad(n) { return n < 10 ? '0' + n : '' + n; }
+    document.getElementById('cd-d').textContent = pad(d);
+    document.getElementById('cd-h').textContent = pad(h);
+    document.getElementById('cd-m').textContent = pad(m);
+    document.getElementById('cd-s').textContent = pad(s);
+  }
+  update();
+  setInterval(update, 1000);
+})();
+
+// MUSIC — AudioContext unlock (iOS fix) + aggressive autoplay
+var playing = false;
+var audio = document.getElementById('bgAudio');
+audio.volume = 0.4;
+var _ctx = null;
+
+function ensureCtx() {
+  if (!_ctx) {
+    try { _ctx = new (window.AudioContext || window.webkitAudioContext)(); } catch(e) {}
+  }
+  if (_ctx && _ctx.state === 'suspended') { _ctx.resume(); }
+}
+
+function startAudio() {
+  ensureCtx();
+  audio.play().then(function() { playing = true; }).catch(function() {});
+}
+
+startAudio();
+
+var EVTS = ['click','touchstart','touchend','touchmove','mousedown','mousemove','keydown','scroll','pointerdown','wheel'];
+function unlockOnce() {
+  ensureCtx();
+  if (!playing) startAudio();
+  EVTS.forEach(function(ev) { document.removeEventListener(ev, unlockOnce); });
+  window.removeEventListener('focus', unlockOnce);
+}
+EVTS.forEach(function(ev) { document.addEventListener(ev, unlockOnce, { passive: true }); });
+window.addEventListener('focus', unlockOnce);
+
+window.addEventListener('scroll', function onScroll() {
+  ensureCtx();
+  if (!playing) startAudio();
+  window.removeEventListener('scroll', onScroll);
+}, { passive: true });
+
+var _r = 0, _iv = setInterval(function() {
+  if (playing || _r > 25) { clearInterval(_iv); return; }
+  startAudio(); _r++;
+}, 400);
+
+// SURVEY
+function toggleChip(el) { el.classList.toggle('selected'); }
+function toggleChipOther(el, wrapId) {
+  el.classList.toggle('selected');
+  document.getElementById(wrapId).classList.toggle('visible', el.classList.contains('selected'));
+}
+function toggleCheck(el) { el.classList.toggle('checked'); }
+
+const FORM_ID = '1FAIpQLSc6pR_c_0-qU9hgjpjjFYpYGMi64Tcc4AjbjF6m_0YoB_fDFw';
+const ENTRY = {
+  name:    'entry.303504860',
+  bbq:     'entry.668720293',
+  stay:    'entry.1650889542',
+  alcohol: 'entry.1670577516',
+};
+
+function submitSurvey() {
+  var btn  = document.getElementById('submitBtn');
+  var ok   = document.getElementById('successMsg');
+  var name = document.getElementById('guestName').value.trim();
+  if (!name) {
+    var f = document.getElementById('guestName');
+    f.focus(); f.style.borderColor = 'rgba(220,180,160,0.6)';
+    setTimeout(function() { f.style.borderColor = ''; }, 2000); return;
+  }
+  btn.disabled = true; btn.textContent = 'Sending...';
+  var bbqVals  = Array.from(document.querySelectorAll('#bbqGrid .opt-chip.selected')).map(function(e) { return e.textContent.trim(); });
+  var stayVals = Array.from(document.querySelectorAll('#stayGrid .check-item.checked')).map(function(e) { return e.querySelector('.check-item-label').textContent.trim(); });
+  var alcVals  = Array.from(document.querySelectorAll('#alcGrid .opt-chip.selected')).map(function(e) { return e.textContent.trim(); });
+  var otherAlc = document.getElementById('otherAlcText').value.trim();
+  if (otherAlc) alcVals.push(otherAlc);
+  var url = 'https://docs.google.com/forms/d/e/' + FORM_ID + '/formResponse';
+  function addCB(form, id, vals) {
+    (vals.length ? vals : ['']).forEach(function(v) {
+      var i = document.createElement('input');
+      i.type = 'hidden'; i.name = id; i.value = v; form.appendChild(i);
+    });
+    var s = document.createElement('input');
+    s.type = 'hidden'; s.name = id + '_sentinel'; s.value = ''; form.appendChild(s);
+  }
+  var iframe = document.createElement('iframe');
+  iframe.name = '_gf'; iframe.style.display = 'none';
+  var form = document.createElement('form');
+  form.method = 'POST'; form.action = url; form.target = '_gf';
+  var ni = document.createElement('input');
+  ni.type = 'hidden'; ni.name = ENTRY.name; ni.value = name; form.appendChild(ni);
+  addCB(form, ENTRY.bbq, bbqVals);
+  addCB(form, ENTRY.stay, stayVals);
+  addCB(form, ENTRY.alcohol, alcVals);
+  document.body.append(iframe, form); form.submit();
+  setTimeout(function() {
+    btn.style.display = 'none'; ok.style.display = 'block';
+    form.remove(); iframe.remove();
+  }, 1500);
+}
+
+// ── SPLASH SCREEN — envelope with wax seal ──
+var splashOpened = false;
+
+function openEnvelope() {
+  if (splashOpened) return;
+  splashOpened = true;
+
+  var wrap   = document.getElementById('envelopeWrap');
+  var seal   = document.getElementById('waxSeal');
+  var splash = document.getElementById('splash');
+
+  // 1. Seal pop
+  seal.classList.add('clicked');
+
+  // 2. Open flap + slide letter
+  setTimeout(function() { wrap.classList.add('opening'); }, 300);
+
+  // 3. Start audio + fade splash
+  setTimeout(function() {
+    startAudio();
+    splash.classList.add('hiding');
+    document.body.classList.add('splash-done');
+  }, 1200);
+
+  // 4. Hide completely
+  setTimeout(function() {
+    splash.classList.add('hidden');
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, 2100);
+}
+
+// Click anywhere on splash as fallback
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('splash').addEventListener('click', openEnvelope);
+});
+
+</script>
+</body>
+</html>
